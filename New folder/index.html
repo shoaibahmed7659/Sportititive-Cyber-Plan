@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportetitive Cyber Resilience Briefing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">Sportetitive Cyber Briefing</div>
+      <nav>
+        <a href="index.html" class="active">Overview</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="incident-response.html">Incident Response</a>
+        <a href="cio-roadmap.html">CIO Roadmap</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Board-level conclusion</p>
+        <h1>Sportetitive’s ransomware incident was a business crisis, not only an IT failure.</h1>
+        <p class="lead">The incident exposed weaknesses in governance, supplier trust, identity management, monitoring, legal readiness and legacy technology. This website brings the core findings into one place so the board, CIO and operational teams can move from impact assessment to practical improvement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Executive position</h2>
+          <p>Sportetitive suffered a serious ransomware event after attackers used social engineering against a managed service provider, captured privileged credentials, moved across the environment and later encrypted systems while stealing personal data. The attack succeeded because several weaknesses aligned at the same time, including missing MFA, broad administrator access, supplier over-trust, weak early detection and the limitations of a legacy POS environment.</p>
+          <p>This means the response cannot be reduced to technical clean-up. The organisation needs a board-led cyber resilience programme that connects business continuity, legal accountability, supplier oversight, backup assurance, staff awareness and long-term technology investment.</p>
+        </div>
+        <div class="card accent">
+          <h2>Website purpose</h2>
+          <p>This site is organised into focused sections so that leadership can review the attack path, the control strategy, the incident response model and the CIO-led implementation roadmap without reading the full dissertation material first.</p>
+          <ul>
+            <li>Mind-map view of preparation, detection, containment, eradication, recovery and lessons learned.</li>
+            <li>MITRE ATT&amp;CK and Zero Trust mapping that shows where the attack could have been interrupted.</li>
+            <li>A phased CIO delivery plan that links governance, technology, supplier assurance and board reporting.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Confirmed attack path</h2>
+        <div class="timeline">
+          <div class="step"><span>01</span><p>Attackers gathered public information from LinkedIn and supplier relationships to create a convincing pretext.</p></div>
+          <div class="step"><span>02</span><p>A spoofed CEO-style email directed the MSP technician to a fake survey link, leading to malware installation.</p></div>
+          <div class="step"><span>03</span><p>Keylogging activity captured privileged credentials, giving the attackers a route into core systems and cloud services.</p></div>
+          <div class="step"><span>04</span><p>The attackers moved laterally, identified valuable data, disabled protections and prepared the ransomware impact stage.</p></div>
+          <div class="step"><span>05</span><p>Web services failed, files were encrypted and personal data exposure was later confirmed, creating both operational and regulatory consequences.</p></div>
+          <div class="step"><span>06</span><p>Recovery then depended on board decisions, evidence preservation, insurer engagement, legal assessment and restoration from clean backups.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-3">
+        <div class="mini-card">
+          <h3>Framework view</h3>
+          <p>See the attack translated into MITRE-style stages and Zero Trust control groups.</p>
+          <a href="frameworks.html">Open frameworks page</a>
+        </div>
+        <div class="mini-card">
+          <h3>Response view</h3>
+          <p>Review the incident response cycle as a board-friendly operational playbook.</p>
+          <a href="incident-response.html">Open incident response</a>
+        </div>
+        <div class="mini-card">
+          <h3>CIO view</h3>
+          <p>Follow the phased roadmap from stabilisation to long-term structural change.</p>
+          <a href="cio-roadmap.html">Open CIO roadmap</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Free hosting recommendation</h2>
+          <p>The best free option for this website is <strong>GitHub Pages</strong> if you want the simplest setup for a static HTML, CSS and JavaScript site. GitHub Pages is free for public repositories, supports custom domains, free HTTPS and Git-based deployment, and is especially suitable for academic project sites, portfolios and documentation-style pages.</p>
+          <p>If you want a slightly more flexible deployment workflow later, Netlify is also strong, but GitHub Pages is the easiest starting point for this exact website because it is fully static and does not need a server.</p>
+        </div>
+        <div class="card">
+          <h2>Quick hosting steps</h2>
+          <ol>
+            <li>Create a GitHub repository and upload all website files.</li>
+            <li>Open repository settings and enable GitHub Pages.</li>
+            <li>Select the branch and root folder as the deployment source.</li>
+            <li>Wait for GitHub to publish the live URL.</li>
+            <li>Optionally connect a custom domain later.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

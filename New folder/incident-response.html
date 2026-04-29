@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident Response Plan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">Sportetitive Cyber Briefing</div>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="incident-response.html" class="active">Incident Response</a>
+        <a href="cio-roadmap.html">CIO Roadmap</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <p class="eyebrow">Controlled ransomware response</p>
+      <h1>Incident response model for Sportetitive</h1>
+      <p class="lead">The purpose of the plan is to protect people, preserve evidence, restore services safely and maintain board accountability. The model below follows the full lifecycle from preparation to lessons learned and reflects the need for technical, legal, operational and communication decisions to work together.</p>
+
+      <div class="framework-list">
+        <div class="framework-item"><h2>Preparation</h2><p>Before a crisis begins, Sportetitive should maintain an offline ransomware playbook, named roles, escalation contacts, supplier contacts, insurer details, regulatory routes, backup evidence and restoration procedures. Staff awareness, tabletop exercises and practical training are essential because a response plan only works if people already know how to use it.</p></div>
+        <div class="framework-item"><h2>Detection</h2><p>The organisation should identify suspicious logins, service failures, disabled security tools, unusual data movement and early ransomware indicators quickly. The first task is not to guess everything at once, but to establish what is known, what systems are affected, whether personal data may be involved and whether the attacker still has active access.</p></div>
+        <div class="framework-item"><h2>Containment</h2><p>Affected systems should be isolated, compromised accounts disabled and risky access paths such as supplier remote access reviewed immediately. At the same time, the response team must preserve logs and evidence where possible, because wiping systems too early may damage the investigation and weaken later legal or insurance support.</p></div>
+        <div class="framework-item"><h2>Eradication</h2><p>Threat removal should include malware removal, persistence elimination, password resets for high-risk accounts and closure of exploited weaknesses. Heavily compromised systems should be rebuilt from clean images rather than trusted simply because they appear to work again.</p></div>
+        <div class="framework-item"><h2>Recovery</h2><p>Systems should be restored from clean, tested backups in a business-led order. Identity services, communications, core business systems, website functions and critical store operations should return in a controlled sequence, supported by enhanced monitoring to catch any sign of re-entry.</p></div>
+        <div class="framework-item"><h2>Lessons learned</h2><p>Within a defined period after stabilisation, the board should receive a concise post-incident review covering root cause, control failures, legal exposure, supplier weaknesses, cost, staff wellbeing, response quality and required investment. The plan, training and governance metrics should then be updated so the organisation improves rather than simply recovers.</p></div>
+      </div>
+
+      <div class="card top-gap">
+        <h2>Leadership ownership</h2>
+        <p>The CIO should own business impact assessment, board updates, recovery priorities and decision logging. The CTO should lead technical containment, eradication, restoration sequencing and evidence-led recovery. Legal and compliance leadership should guide breach notification and documentation, while HR and communications should manage staff, customer and stakeholder messaging in a controlled way.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

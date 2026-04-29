@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framework Mapping</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">Sportetitive Cyber Briefing</div>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="frameworks.html" class="active">Frameworks</a>
+        <a href="incident-response.html">Incident Response</a>
+        <a href="cio-roadmap.html">CIO Roadmap</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <p class="eyebrow">MITRE ATT&amp;CK + Zero Trust</p>
+      <h1>Using frameworks to explain the attack and justify the controls</h1>
+      <p class="lead">This page translates the Sportetitive incident into a structured attack path so the recommended security controls are easier to defend in front of the board. MITRE ATT&amp;CK helps describe how the attack unfolded, while Zero Trust explains the management response: trust less, verify more, reduce privilege and monitor continuously.</p>
+
+      <div class="framework-list">
+        <div class="framework-item">
+          <h2>Reconnaissance</h2>
+          <p>Attackers used public information, names, roles and supplier relationships to prepare a believable social engineering approach. This highlights a governance issue as much as a technical one, because supplier exposure and publicly visible context increased the chance of a successful pretext.</p>
+          <p><strong>Zero Trust control response:</strong> reduce unnecessary exposure, strengthen supplier assurance and include third-party relationships in cyber risk reporting.</p>
+        </div>
+
+        <div class="framework-item">
+          <h2>Initial access</h2>
+          <p>A convincing fake survey link was sent through a trusted-looking message. The MSP relationship lowered suspicion and helped the attackers reach the first foothold without needing a complex exploit.</p>
+          <p><strong>Zero Trust control response:</strong> strengthen email filtering, improve phishing awareness, verify requests more carefully and avoid treating supplier-origin traffic as automatically safe.</p>
+        </div>
+
+        <div class="framework-item">
+          <h2>Credential access</h2>
+          <p>Keylogger activity captured privileged credentials, which then became the main route into the organisation’s environment. This is one of the most important lessons from the incident because a single powerful account acted like a master key.</p>
+          <p><strong>Zero Trust control response:</strong> enforce MFA, separate admin accounts from normal user accounts, reduce standing privilege and review access rights regularly.</p>
+        </div>
+
+        <div class="framework-item">
+          <h2>Lateral movement</h2>
+          <p>Once privileged access had been captured, the attackers moved across systems, explored the environment and reached services that should have been harder to traverse. This reflects the risk of broad trust across stores, HQ systems, cloud services and supplier-linked access paths.</p>
+          <p><strong>Zero Trust control response:</strong> use segmentation, conditional access, tighter remote service control and stronger visibility over unusual authentication and admin activity.</p>
+        </div>
+
+        <div class="framework-item">
+          <h2>Exfiltration and impact</h2>
+          <p>Personal data was stolen and systems were later encrypted for extortion and disruption. At this point the event stopped being only an outage problem and became a regulatory, reputational and governance issue.</p>
+          <p><strong>Zero Trust control response:</strong> improve data classification, monitor abnormal transfers, protect backups, define the recovery order in advance and ensure the board is prepared for legal reporting decisions.</p>
+        </div>
+      </div>
+
+      <div class="card accent top-gap">
+        <h2>CIO interpretation</h2>
+        <p>For the CIO, these frameworks are useful because they convert a technical incident into a management narrative. MITRE ATT&amp;CK helps explain how the attack progressed, while Zero Trust turns that explanation into a control strategy built around identity, segmentation, monitoring, supplier governance, backup resilience and board assurance.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

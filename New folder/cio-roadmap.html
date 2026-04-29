@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIO Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">Sportetitive Cyber Briefing</div>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="incident-response.html">Incident Response</a>
+        <a href="cio-roadmap.html" class="active">CIO Roadmap</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <p class="eyebrow">CIO strategic approach</p>
+      <h1>A phased roadmap for cyber resilience</h1>
+      <p class="lead">The CIO role is to make sure technology supports the organisation’s objectives while operating within an acceptable level of risk. After this incident, the priority is not to buy isolated tools in panic, but to build a governed resilience model that connects cyber security, business continuity, supplier control and board oversight.</p>
+
+      <div class="framework-list">
+        <div class="framework-item">
+          <h2>Phase 1: Stabilise</h2>
+          <p>Reduce immediate recurrence risk and restore confidence in basic control areas. This includes enforcing MFA for cloud, admin, VPN and supplier access, validating backup integrity, protecting backup credentials, reviewing privileged accounts, restricting supplier access and starting mandatory staff awareness and phishing reporting.</p>
+        </div>
+        <div class="framework-item">
+          <h2>Phase 2: Strengthen</h2>
+          <p>Improve resilience through better visibility and stronger control design. This phase should include centralised logging, endpoint monitoring on supported systems, improved alerting for unusual authentication and privilege behaviour, network segmentation, clearer incident response rehearsals, supplier assurance reviews and stronger board reporting metrics.</p>
+        </div>
+        <div class="framework-item">
+          <h2>Phase 3: Transform</h2>
+          <p>Address the structural issues that made the organisation harder to protect. The legacy POS environment should be treated as a strategic business risk, with compensating controls in the short term and a board-supported replacement or redesign plan in the medium term. Zero Trust should become embedded into access, architecture, supplier governance and decision-making.</p>
+        </div>
+      </div>
+
+      <div class="card accent top-gap">
+        <h2>Board reporting focus</h2>
+        <p>The board should receive a concise cyber dashboard with indicators such as MFA coverage, privileged access numbers, supplier risk ratings, backup restore test evidence, detection and containment times, phishing reporting trends and unresolved critical weaknesses. This helps cyber risk stay visible as a business issue rather than being treated as an isolated IT concern.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

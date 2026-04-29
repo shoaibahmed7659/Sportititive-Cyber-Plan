@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sportetitive Cyber Resilience Briefing</title>
+    <meta
+      name="description"
+      content="A CIO-led cyber resilience briefing for Sportetitive, covering ransomware impact, business risk, response priorities and implementation direction."
+    />
+    <meta property="og:title" content="Sportetitive Cyber Resilience Briefing" />
+    <meta
+      property="og:description"
+      content="Executive cyber resilience briefing covering ransomware response, Zero Trust, governance, leadership responsibilities and recovery planning."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Sportetitive cyber resilience home">
+          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 4 40 11v13c0 10.5-6.6 16.8-16 20-9.4-3.2-16-9.5-16-20V11L24 4Z" stroke="currentColor" stroke-width="3" />
+            <path d="M17 24h14M24 17v14" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span class="brand-name">
+            <strong>Sportetitive Resilience</strong>
+            <span>CIO-led cyber resilience briefing</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="active" href="./index.html">Overview</a>
+          <a href="./incident-response.html">Incident Response</a>
+          <a href="./frameworks.html">MITRE &amp; Zero Trust</a>
+          <a href="./cio-roadmap.html">CIO Roadmap</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Executive overview</span>
+            <h1>From ransomware crisis to cyber resilience.</h1>
+            <p class="hero-copy">
+              A concise briefing for Sportetitive’s leadership, setting out the business impact, control failures, response priorities and CIO-led implementation direction.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="./incident-response.html">View incident plan</a>
+              <a class="button secondary" href="./cio-roadmap.html">Open CIO roadmap</a>
+            </div>
+          </div>
+          <aside class="board-card" aria-label="Cyber risk snapshot">
+            <div class="board-card-top">
+              <span>Risk snapshot</span>
+              <span>March 2026</span>
+            </div>
+            <div class="risk-meter">
+              <div class="meter-row">
+                <span>Data exposure</span>
+                <div class="bar high" aria-hidden="true"><span></span></div>
+                <b>High</b>
+              </div>
+              <div class="meter-row">
+                <span>Supplier risk</span>
+                <div class="bar medium" aria-hidden="true"><span></span></div>
+                <b>Elevated</b>
+              </div>
+              <div class="meter-row">
+                <span>Backup posture</span>
+                <div class="bar good" aria-hidden="true"><span></span></div>
+                <b>Recoverable</b>
+              </div>
+            </div>
+            <div class="hero-stat-grid" aria-label="Key figures">
+              <div class="hero-stat">
+                <strong>125</strong>
+                <span>Employees affected by the operational response</span>
+              </div>
+              <div class="hero-stat">
+                <strong>60k+</strong>
+                <span>Customer records identified as exposed</span>
+              </div>
+              <div class="hero-stat">
+                <strong>£1.3m</strong>
+                <span>Estimated incident cost</span>
+              </div>
+              <div class="hero-stat">
+                <strong>72h</strong>
+                <span>Critical regulatory and extortion window</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section tight">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Business context</span>
+            <h2>What happened at Sportetitive?</h2>
+            <p>
+              Sportetitive’s ransomware incident combined social engineering, supplier trust, missing MFA, excessive privileged access, weak monitoring and legacy POS constraints that prevented modern controls from being deployed cleanly.
+            </p>
+          </div>
+          <div class="summary-grid">
+            <article class="panel">
+              <h3>Board-level conclusion</h3>
+              <p>
+                This is not only a technical recovery issue. The response must connect cyber security strategy, governance, supplier oversight, legal readiness, staff communication and investment decisions.
+              </p>
+            </article>
+            <aside class="panel">
+              <h3>Strategic focus areas</h3>
+              <div class="tag-list" aria-label="Strategic cyber resilience themes">
+                <span class="tag">CIO strategy</span>
+                <span class="tag">Zero Trust</span>
+                <span class="tag">MITRE ATT&amp;CK</span>
+                <span class="tag">Cyber Kill Chain</span>
+                <span class="tag">DPIA</span>
+                <span class="tag">ICO reporting</span>
+                <span class="tag">Supplier risk</span>
+                <span class="tag">Ransomware readiness</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Briefing structure</span>
+            <h2>Use the pages by decision need.</h2>
+            <p>
+              The briefing is split into focused pages so directors, technical leads and the owner can move quickly from the executive picture to the controls and delivery plan.
+            </p>
+          </div>
+          <div class="page-card-grid">
+            <a class="page-card" href="./incident-response.html">
+              <span>01</span>
+              <h3>Incident response plan</h3>
+              <p>Mind-map view of preparation, detection, containment, recovery, communications and post-incident learning.</p>
+            </a>
+            <a class="page-card" href="./frameworks.html">
+              <span>02</span>
+              <h3>MITRE and Zero Trust</h3>
+              <p>Attack-path mapping with the controls that interrupt reconnaissance, access, credential theft, movement and impact.</p>
+            </a>
+            <a class="page-card" href="./cio-roadmap.html">
+              <span>03</span>
+              <h3>CIO implementation roadmap</h3>
+              <p>Phase-wise CIO delivery plan connecting governance, budget, architecture, supplier risk and board reporting.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tight">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Attack narrative</span>
+            <h2>A timeline the board can follow.</h2>
+            <p>
+              The sequence below presents the confirmed attack path in board-level terms: initial targeting, compromise, ransomware execution, data-breach discovery and recovery.
+            </p>
+          </div>
+          <div class="timeline compact">
+            <article class="timeline-item">
+              <div class="timeline-date">6 Jan</div>
+              <div class="timeline-content">
+                <h3>Public information exposed</h3>
+                <p>LinkedIn activity gives attackers useful names, relationships and context for social engineering.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">20 Feb</div>
+              <div class="timeline-content">
+                <h3>MSP technician targeted</h3>
+                <p>A convincing CEO-style email directs the technician to a fake survey domain.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">23 Feb</div>
+              <div class="timeline-content">
+                <h3>Admin credentials captured</h3>
+                <p>Keylogger activity captures domain administrator credentials, enabling lateral movement.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">8 Mar</div>
+              <div class="timeline-content">
+                <h3>Ransomware becomes visible</h3>
+                <p>Web services fail, files are encrypted and the IT team identifies the ransomware incident.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">18 Mar</div>
+              <div class="timeline-content">
+                <h3>Data breach confirmed</h3>
+                <p>Personal data exposure is confirmed and the CIO submits formal notification to the ICO.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tight">
+        <div class="container media-split">
+          <figure class="media-frame">
+            <img src="./assets/decisions-consequences.jpg" alt="Board decision model showing ransomware response choices, consequences, business recovery and regulatory exposure." width="2200" height="738" loading="lazy" decoding="async" />
+            <figcaption>Board decision model showing how choices around recovery, notification, public communication and evidence gathering influence operational, regulatory and financial outcomes.</figcaption>
+          </figure>
+          <div>
+            <div class="section-header">
+              <span class="eyebrow">Decision evidence</span>
+              <h2>Why governance matters.</h2>
+              <p>
+                Technical recovery can still fail at board level if data protection decisions, DPIAs, stakeholder communications and risk documentation are weak.
+              </p>
+            </div>
+            <ul class="check-list">
+              <li>Build DPIA and ICO evidence into the governance process.</li>
+              <li>Keep a decision log for ransom, store closure, public notice and customer warning.</li>
+              <li>Frame investment against direct incident cost, regulatory exposure and long-term trust.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Recognised guidance</span>
+            <h2>External framework anchors.</h2>
+            <p>
+              These public sources support the cyber resilience recommendations and provide recognised guidance for Zero Trust, ransomware mitigation, attack mapping and breach notification.
+            </p>
+          </div>
+          <div class="source-grid">
+            <article class="source-card">
+              <h3>NIST Zero Trust Architecture</h3>
+              <p>NIST SP 800-207 describes Zero Trust Architecture as applying zero trust principles to enterprise infrastructure, workflows and access policies.</p>
+              <p><a href="https://csrc.nist.gov/pubs/sp/800/207/final" target="_blank" rel="noopener noreferrer">Open NIST SP 800-207</a></p>
+            </article>
+            <article class="source-card">
+              <h3>NCSC ransomware guidance</h3>
+              <p>NCSC guidance recommends defence-in-depth, MFA, backup protection, preparation and containment steps for malware and ransomware incidents.</p>
+              <p><a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" target="_blank" rel="noopener noreferrer">Open NCSC ransomware guidance</a></p>
+            </article>
+            <article class="source-card">
+              <h3>MITRE ATT&amp;CK T1486</h3>
+              <p>MITRE ATT&amp;CK T1486 describes adversaries encrypting data on target systems to interrupt availability and support extortion.</p>
+              <p><a href="https://attack.mitre.org/techniques/T1486/" target="_blank" rel="noopener noreferrer">Open MITRE T1486</a></p>
+            </article>
+            <article class="source-card">
+              <h3>ICO 72-hour breach guidance</h3>
+              <p>The ICO states that reportable personal data breaches must be reported without undue delay and within 72 hours where required.</p>
+              <p><a href="https://ico.org.uk/for-organisations/advice-for-small-organisations/personal-data-breaches/72-hours-how-to-respond-to-a-personal-data-breach/" target="_blank" rel="noopener noreferrer">Open ICO guidance</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Sportetitive Cyber Resilience Briefing</p>
+        <p>Prepared as a CIO-led executive briefing for cyber resilience, governance and ransomware readiness.</p>
+      </div>
+    </footer>
+  <script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
