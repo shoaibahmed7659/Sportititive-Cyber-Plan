@@ -1,56 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frameworks | Sportetitive</title>
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://api.fontshare.com"/>
+  <link rel="stylesheet" href="./base.css"/>
+  <link rel="stylesheet" href="./style.css"/>
   <script defer src="./app.js"></script>
+  <title>Security Frameworks | Sportetitive Cyber Resilience Portal</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="./index.html">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <span class="brand-name"><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html">Overview</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./attack-impact.html">Attack &amp; Impact</a>
-        <a href="./incident-response.html">Response</a>
-        <a href="./frameworks.html">Frameworks</a>
+        <a href="./incident-response.html">72h Playbook</a>
+        <a href="./frameworks.html" aria-current=page>Frameworks</a>
         <a href="./leadership-roles.html">Leadership</a>
         <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-
   <main id="main">
+
     <section class="page-hero">
       <div class="container">
-        <div class="eyebrow">Framework view</div>
-        <h1>MITRE ATT&amp;CK explains the attack path, while Zero Trust explains the control response</h1>
-        <p>MITRE ATT&amp;CK helps the board understand how the attackers moved from initial contact to business impact. Zero Trust then provides a practical control narrative built on strong authentication, least privilege, segmentation, monitoring, and supplier verification.</p>
+        <div class="eyebrow">Security Frameworks</div>
+        <h1>The frameworks behind Sportetitive&apos;s response and improvement strategy</h1>
+        <p class="page-hero-copy">This section provides the framework context for every decision in this portal: MITRE ATT&amp;CK, the Cyber Kill Chain, Zero Trust, and NIST SP 800-61. Each framework is explained in plain language with direct links to official documentation, and mapped to the Sportetitive attack where relevant.</p>
+        <div class="hero-refs">
+          <a href="https://attack.mitre.org" target="_blank" rel="noopener noreferrer">MITRE ATT&amp;CK</a>
+          <a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" target="_blank" rel="noopener noreferrer">Cyber Kill Chain</a>
+          <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework</a>
+          <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf" target="_blank" rel="noopener noreferrer">NIST SP 800-61</a>
+          <a href="https://www.ncsc.gov.uk/guidance/zero-trust-architecture" target="_blank" rel="noopener noreferrer">NCSC Zero Trust guidance</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="framework-grid">
-          <article class="framework-card"><span>Reconnaissance</span><h3>Initial access through trust</h3><p>The attackers used public information and a convincing phishing route through a supplier relationship. The response lesson is that external trust should never replace proper verification.</p></article>
-          <article class="framework-card"><span>Credential access</span><h3>Identity became the breach multiplier</h3><p>Captured privileged credentials allowed the attackers to avoid repeated intrusion effort, showing why MFA, admin separation, and access review should be central control priorities.</p></article>
-          <article class="framework-card"><span>Lateral movement</span><h3>Broad access enabled spread</h3><p>Insufficient segmentation allowed the attackers to move further than they should have. Zero Trust reduces this by limiting what users, devices, and suppliers can reach.</p></article>
-          <article class="framework-card"><span>Exfiltration</span><h3>Data theft raised legal exposure</h3><p>The theft of personal data changed the event from outage management to regulatory risk, making monitoring, classification, and transfer visibility more important.</p></article>
-          <article class="framework-card"><span>Impact</span><h3>Encryption created board pressure</h3><p>The encryption of systems disrupted operations and intensified executive time pressure, reinforcing the need for tested backups, recovery order, and business continuity alignment.</p></article>
-          <article class="framework-card"><span>Zero Trust</span><h3>Control strategy for the future</h3><p>Zero Trust gives the CIO a business-friendly narrative: every user, device, supplier session, and administrative action should be verified, limited, and monitored.</p></article>
+        <div class="section-header reveal">
+          <h2>MITRE ATT&amp;CK Framework</h2>
+          <p>MITRE ATT&amp;CK is a globally recognised knowledge base of adversary tactics, techniques, and procedures (TTPs). Sportetitive&apos;s attack maps directly onto multiple ATT&amp;CK Enterprise techniques, each of which suggests a specific defensive countermeasure.</p>
+          <a class="btn btn-ghost" href="https://attack.mitre.org" target="_blank" rel="noopener noreferrer">Open MITRE ATT&amp;CK Enterprise matrix &rarr;</a>
+        </div>
+        <div class="mitre-table reveal">
+          <div class="mt-header"><span>ATT&amp;CK Technique</span><span>What the attacker did at Sportetitive</span><span>NCSC countermeasure</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1589/" target="_blank" rel="noopener noreferrer">T1589 Gather Victim Identity</a><span>Harvested Pete Mitchell&apos;s name, email, and employer from LinkedIn</span><span>OSINT awareness training; limit employee public exposure</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1566/001/" target="_blank" rel="noopener noreferrer">T1566.001 Spear Phishing</a><span>Targeted phishing email impersonating the CEO sent to Pete Mitchell</span><span>Email authentication (DMARC/SPF/DKIM); anti-phishing training; MFA</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1078/" target="_blank" rel="noopener noreferrer">T1078 Valid Accounts</a><span>MSP credentials used to log into Sportetitive infrastructure</span><span>MFA on all external access; Privileged Access Management</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1133/" target="_blank" rel="noopener noreferrer">T1133 External Remote Services</a><span>MSP remote management tools used as the access route</span><span>Restrict and monitor MSP remote access; time-limited sessions with full logging</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1056/001/" target="_blank" rel="noopener noreferrer">T1056.001 Keylogging</a><span>Keylogger installed via MSP toolset to capture IT Manager&apos;s admin credentials</span><span>Endpoint Detection &amp; Response; behaviour-based monitoring; least-privilege access</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1021/001/" target="_blank" rel="noopener noreferrer">T1021.001 RDP Lateral Movement</a><span>Attacker moved laterally across corporate network using captured admin credentials</span><span>Network segmentation; RDP disabled except where required; PAM</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1048/" target="_blank" rel="noopener noreferrer">T1048 Exfiltration Over Alternative Protocol</a><span>60,000+ customer records and employee data exfiltrated before encryption</span><span>Data Loss Prevention; egress monitoring; cloud CASB controls</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1486/" target="_blank" rel="noopener noreferrer">T1486 Data Encrypted for Impact</a><span>Conti-variant ransomware deployed; AES-256, RSA and Curve25519 used</span><span>Tested offline backups; ransomware-resistant backup architecture; IR plan</span></div>
+          <div class="mt-row"><a href="https://attack.mitre.org/techniques/T1490/" target="_blank" rel="noopener noreferrer">T1490 Inhibit System Recovery</a><span>Backup access disrupted; online backup credential shared with compromised admin account</span><span>Segregated backup credentials; immutable backup storage; tested restoration</span></div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><span>Frameworks</span><span>MITRE ATT&amp;CK and Zero Trust view</span></div></footer>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Cyber Kill Chain</h2>
+          <p>Developed by Lockheed Martin, the Cyber Kill Chain describes the seven stages an attacker must progress through to achieve their objective. Disrupting any stage stops or limits the attack. The Sportetitive attack progressed through all seven stages.</p>
+          <a class="btn btn-ghost" href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" target="_blank" rel="noopener noreferrer">Lockheed Martin Kill Chain overview &rarr;</a>
+        </div>
+        <div class="kc-table reveal">
+          <div class="kct-row kct-1"><div class="kct-phase">1. Reconnaissance</div><div class="kct-desc">LinkedIn post, public OSINT, no network contact</div><div class="kct-break"><strong>Break it:</strong> Employee OSINT training; limit professional social media exposure; dark web monitoring</div></div>
+          <div class="kct-row kct-2"><div class="kct-phase">2. Weaponisation</div><div class="kct-desc">Fake intranet site, CEO-spoofed email crafted</div><div class="kct-break"><strong>Break it:</strong> DMARC email authentication; brand impersonation monitoring</div></div>
+          <div class="kct-row kct-3"><div class="kct-phase">3. Delivery</div><div class="kct-desc">Phishing link clicked by Pete Mitchell; credentials captured</div><div class="kct-break"><strong>Break it:</strong> Anti-phishing training; MFA so captured password alone is insufficient; email gateway filtering</div></div>
+          <div class="kct-row kct-4"><div class="kct-phase">4. Exploitation</div><div class="kct-desc">MSP access used; keylogger deployed via RMM toolset</div><div class="kct-break"><strong>Break it:</strong> Restrict and monitor MSP toolset permissions; EDR on all endpoints; least-privilege</div></div>
+          <div class="kct-row kct-5"><div class="kct-phase">5. Installation</div><div class="kct-desc">Persistent access established via captured domain admin credentials</div><div class="kct-break"><strong>Break it:</strong> PAM with just-in-time privilege; alerting on off-hours admin logins; behaviour analytics</div></div>
+          <div class="kct-row kct-6"><div class="kct-phase">6. C2 &amp; Lateral movement</div><div class="kct-desc">RDP lateral movement; two weeks of undetected exploration</div><div class="kct-break"><strong>Break it:</strong> Network segmentation; SIEM; Zero Trust assume-breach posture; SOC monitoring</div></div>
+          <div class="kct-row kct-7"><div class="kct-phase">7. Actions on Objectives</div><div class="kct-desc">Data exfiltration then ransomware deployment; ransom demand via CEO email</div><div class="kct-break"><strong>Break it:</strong> DLP; immutable backups; tested incident response plan; IR retainer</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Zero Trust Architecture</h2>
+          <p>Zero Trust is a security model built on the principle &ldquo;never trust, always verify&rdquo;. It eliminates the assumption that anything inside the network perimeter is safe. The Sportetitive attack succeeded precisely because implicit trust was placed in the MSP, in domain admin credentials, and in internal network traffic. Zero Trust removes every one of these assumptions.</p>
+          <a class="btn btn-ghost" href="https://www.ncsc.gov.uk/guidance/zero-trust-architecture" target="_blank" rel="noopener noreferrer">NCSC Zero Trust guidance &rarr;</a>
+        </div>
+        <div class="zt-grid reveal">
+          <div class="zt-card"><h3>Verify explicitly</h3><p>Every access request &mdash; from any user, device, or service, inside or outside the network &mdash; is authenticated, authorised, and continuously validated. MFA on every account is the minimum starting point. No account accesses systems without proof of identity.</p></div>
+          <div class="zt-card"><h3>Use least privilege</h3><p>Every user and service account has only the access it needs to do its job. Domain administrator accounts are not used for daily tasks. Just-in-time access is requested and approved for specific tasks with time limits. Pete Mitchell&apos;s MSP account had access that far exceeded what was needed.</p></div>
+          <div class="zt-card"><h3>Assume breach</h3><p>Design systems as if an attacker is already inside. Segment the network so a compromised MSP account cannot reach customer databases. Monitor all lateral movement. Enforce data-access controls so exfiltration requires multiple steps. The Sportetitive network had no segmentation that would have slowed the attacker.</p></div>
+          <div class="zt-card"><h3>Verify devices</h3><p>Only managed, compliant devices can access corporate systems. BYOD and supplier devices without management profiles are not trusted. This would have prevented MSP access from an unmanaged device.</p></div>
+          <div class="zt-card"><h3>Monitor continuously</h3><p>Log everything. Alert on anomalies in real time. A SIEM with behaviour-based rules would have flagged off-hours admin logins, unusual lateral movement, and large outbound data transfers long before encryption began. Sportetitive had no 24/7 monitoring.</p></div>
+          <div class="zt-card"><h3>Protect data explicitly</h3><p>Classify data by sensitivity. Encrypt at rest and in transit. Apply access controls at the data level, not just the network level. Customer personal data and employee payroll records require their own access control layer &mdash; independent of network-level trust.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>NIST SP 800-61 &mdash; Computer Security Incident Response</h2>
+          <p>The NIST Special Publication 800-61r2 is the US government&apos;s incident response lifecycle standard. It is widely adopted in the UK, underpins Sportetitive&apos;s incident response plan, and defines the four-phase framework that the 72-hour playbook follows.</p>
+          <a class="btn btn-ghost" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf" target="_blank" rel="noopener noreferrer">NIST SP 800-61r2 (PDF) &rarr;</a>
+        </div>
+        <div class="nist-phases reveal">
+          <div class="nist-phase"><div class="np-num">1</div><h3>Preparation</h3><p>Building the policies, procedures, tools, training, and relationships needed before an incident occurs. Sportetitive&apos;s gap: no tested incident response plan, no cyber insurer retainer, no IR firm on contract.</p></div>
+          <div class="nist-arrow"></div>
+          <div class="nist-phase"><div class="np-num">2</div><h3>Detection &amp; Analysis</h3><p>Identifying that an incident has occurred and understanding its scope and severity. Sportetitive&apos;s gap: the attacker was inside for 13 days before detection because no 24/7 monitoring or SIEM was in place.</p></div>
+          <div class="nist-arrow"></div>
+          <div class="nist-phase"><div class="np-num">3</div><h3>Containment, Eradication &amp; Recovery</h3><p>Isolating affected systems, removing the attacker, restoring from clean backups. Covered in full in the <a href="./incident-response.html">72-hour playbook</a>. The recovery order prioritises identity, monitoring, data, IMS, and website in sequence.</p></div>
+          <div class="nist-arrow"></div>
+          <div class="nist-phase"><div class="np-num">4</div><h3>Post-Incident Activity</h3><p>Lessons-learned review, documentation, evidence preservation, improvement actions. Sportetitive&apos;s 10-working-day post-incident review feeds directly into the <a href="./recommendations.html">three-phase improvement plan</a>.</p></div>
+        </div>
+        <div class="cta-row reveal">
+          <a class="btn btn-primary" href="./recommendations.html">How these frameworks shape the improvement plan &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <div><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">72h Playbook</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
+      </nav>
+      <div class="footer-legal">
+        <span>Sportetitive Ltd &middot; Norwich, East of England</span>
+        <span>External reporting: <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud</a> &middot; <a href="https://report.ncsc.gov.uk" target="_blank" rel="noopener noreferrer">NCSC</a> &middot; <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

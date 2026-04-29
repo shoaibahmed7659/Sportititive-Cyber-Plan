@@ -1,65 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attack & Impact | Sportetitive</title>
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://api.fontshare.com"/>
+  <link rel="stylesheet" href="./base.css"/>
+  <link rel="stylesheet" href="./style.css"/>
   <script defer src="./app.js"></script>
+  <title>Attack & Impact | Sportetitive Cyber Resilience Portal</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="./index.html">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <span class="brand-name"><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html">Overview</a>
-        <a href="./attack-impact.html">Attack &amp; Impact</a>
-        <a href="./incident-response.html">Response</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./attack-impact.html" aria-current=page>Attack &amp; Impact</a>
+        <a href="./incident-response.html">72h Playbook</a>
         <a href="./frameworks.html">Frameworks</a>
         <a href="./leadership-roles.html">Leadership</a>
         <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-
   <main id="main">
+
     <section class="page-hero">
       <div class="container">
-        <div class="eyebrow">Attack narrative</div>
-        <h1>How the incident escalated from phishing and trust abuse into a board-level crisis</h1>
-        <p>The attackers did not need a highly advanced entry technique. They combined social engineering, supplier access, weak identity control, privileged account exposure, and delayed detection to turn one compromise into widespread disruption and a major personal data breach.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="impact-grid">
-          <article class="impact-card"><span>01</span><h3>Initial targeting</h3><p>The attackers used publicly available information and supplier relationships to craft a believable approach to an MSP technician, showing how external trust can become internal risk without strong verification.</p></article>
-          <article class="impact-card"><span>02</span><h3>Credential compromise</h3><p>Malware deployed through the phishing route later captured highly privileged credentials, creating a major escalation point across systems, cloud services and core infrastructure.</p></article>
-          <article class="impact-card"><span>03</span><h3>Lateral movement</h3><p>Once inside, the attackers explored the environment, disabled protections, and moved across systems without being stopped early because access was too broad and visibility was too weak.</p></article>
-          <article class="impact-card"><span>04</span><h3>Operational disruption</h3><p>Files were encrypted, the website and IMS became unavailable, online trading was interrupted, and executives faced time-sensitive decisions even while some store functions remained partially operational.</p></article>
-          <article class="impact-card"><span>05</span><h3>Data breach impact</h3><p>Investigators later confirmed that personal data relating to at least 60,000 customers and all employees had been exposed, transforming the incident into a serious legal and reputational event.</p></article>
-          <article class="impact-card"><span>06</span><h3>Business consequences</h3><p>The attack produced recovery costs, staff fatigue, insurer involvement, reputational damage, disrupted operations, and ongoing anxiety about regulatory scrutiny and future trust.</p></article>
+        <div class="eyebrow">Attack Analysis</div>
+        <h1>The Sportetitive attack: how a single email became a ransomware crisis</h1>
+        <p class="page-hero-copy">This section maps the full attack chain against MITRE ATT&amp;CK and the Cyber Kill Chain framework. Understanding every step &mdash; from the first LinkedIn post to the ransom demand &mdash; is essential to building defences that would have stopped it and to ensuring the board understands its true exposure.</p>
+        <div class="hero-refs">
+          <a href="https://attack.mitre.org" target="_blank" rel="noopener noreferrer">MITRE ATT&amp;CK framework &rarr;</a>
+          <a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" target="_blank" rel="noopener noreferrer">NCSC ransomware guidance &rarr;</a>
+          <a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" target="_blank" rel="noopener noreferrer">Lockheed Martin Cyber Kill Chain &rarr;</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="callout">
-          <h2>The real lesson is that weak trust boundaries and privileged access design can magnify a small entry point into enterprise-wide harm.</h2>
-          <p>That is why the response should not focus only on malware removal. It must also address supplier assurance, identity governance, detection capability, and the quality of executive decision-making under pressure.</p>
+        <div class="section-header reveal">
+          <h2>Cyber Kill Chain phase mapping</h2>
+          <p>Every action the attacker took maps to one of the seven Kill Chain phases. Disrupting any phase would have limited or prevented the attack.</p>
+        </div>
+        <div class="kc-chain reveal">
+          <div class="kc-item">
+            <div class="kc-num">1</div>
+            <div class="kc-content">
+              <h3>Reconnaissance</h3>
+              <p>Pete Mitchell&apos;s LinkedIn post named the charity, his role, his email address, and mentioned the CEO by name. This gave attackers everything they needed to build a targeted spear-phishing campaign at zero cost. Passive OSINT, no network contact required.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1589/" target="_blank" rel="noopener noreferrer">T1589 Gather Victim Identity</a><a href="https://attack.mitre.org/techniques/T1593/" target="_blank" rel="noopener noreferrer">T1593 Search Social Media</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">2</div>
+            <div class="kc-content">
+              <h3>Weaponisation</h3>
+              <p>A fake website impersonating the Sportetitive intranet or supplier portal was created. A custom spear-phishing email was crafted using the CEO&apos;s name and a plausible business reason to visit the site. This required minimal technical skill but high knowledge of the target.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1566/002/" target="_blank" rel="noopener noreferrer">T1566.002 Spear Phishing Link</a><a href="https://attack.mitre.org/techniques/T1608/" target="_blank" rel="noopener noreferrer">T1608 Stage Capabilities</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">3</div>
+            <div class="kc-content">
+              <h3>Delivery</h3>
+              <p>The phishing email was sent directly to Pete Mitchell on 19 February 2026. He clicked the link, entered his MSP credentials on the fake site, and an initial foothold was established. No antivirus alert was triggered because the link itself was to an external server &mdash; not a malicious file.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1566/001/" target="_blank" rel="noopener noreferrer">T1566.001 Phishing</a><a href="https://attack.mitre.org/techniques/T1078/" target="_blank" rel="noopener noreferrer">T1078 Valid Accounts</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">4</div>
+            <div class="kc-content">
+              <h3>Exploitation &amp; Installation</h3>
+              <p>Using Pete&apos;s MSP credentials, attackers logged into Sportetitive&apos;s infrastructure via the MSP&apos;s remote management tools. No vulnerability exploit was needed &mdash; legitimate access routes were used. A keylogger was installed on the IT Manager&apos;s machine through the MSP toolset.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1133/" target="_blank" rel="noopener noreferrer">T1133 External Remote Services</a><a href="https://attack.mitre.org/techniques/T1056/001/" target="_blank" rel="noopener noreferrer">T1056.001 Keylogging</a><a href="https://attack.mitre.org/techniques/T1543/" target="_blank" rel="noopener noreferrer">T1543 Create System Service</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">5</div>
+            <div class="kc-content">
+              <h3>Command &amp; Control</h3>
+              <p>With the IT Manager&apos;s domain administrator credentials captured via keylogger on 23 February, attackers established persistent C2 access. They moved laterally across the network, exploring systems over a two-week period without triggering alerts, because no MFA was required and behaviour-based monitoring was absent.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1071/" target="_blank" rel="noopener noreferrer">T1071 Application Layer Protocol C2</a><a href="https://attack.mitre.org/techniques/T1021/001/" target="_blank" rel="noopener noreferrer">T1021.001 RDP Lateral Movement</a><a href="https://attack.mitre.org/techniques/T1040/" target="_blank" rel="noopener noreferrer">T1040 Network Sniffing</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">6</div>
+            <div class="kc-content">
+              <h3>Actions on Objectives &mdash; Exfiltration</h3>
+              <p>Before deploying ransomware, attackers exfiltrated 60,000+ customer records and all employee records including payroll data. This is the &ldquo;double extortion&rdquo; model: encrypt and steal. Data theft confirms the attacker had read access to customer and HR databases &mdash; both processed under UK GDPR.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1486/" target="_blank" rel="noopener noreferrer">T1486 Data Encrypted for Impact</a><a href="https://attack.mitre.org/techniques/T1048/" target="_blank" rel="noopener noreferrer">T1048 Exfiltration Over Alternative Protocol</a><a href="https://attack.mitre.org/techniques/T1530/" target="_blank" rel="noopener noreferrer">T1530 Data from Cloud Storage</a></div>
+            </div>
+          </div>
+          <div class="kc-item">
+            <div class="kc-num">7</div>
+            <div class="kc-content">
+              <h3>Actions on Objectives &mdash; Encryption &amp; Ransom</h3>
+              <p>On 8 March 2026 at 20:23, ransomware was deployed using AES-256, RSA, and Curve25519 encryption (Conti variant). IMS, website databases, core file servers, and backup access were encrypted. A ransom demand for 1.3 BTC was sent via the compromised CEO email account the following morning.</p>
+              <div class="mitre-tags"><a href="https://attack.mitre.org/techniques/T1486/" target="_blank" rel="noopener noreferrer">T1486 Data Encrypted for Impact</a><a href="https://attack.mitre.org/techniques/T1490/" target="_blank" rel="noopener noreferrer">T1490 Inhibit System Recovery</a><a href="https://attack.mitre.org/techniques/T1489/" target="_blank" rel="noopener noreferrer">T1489 Service Stop</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>ICO obligations triggered</h2>
+          <p>The exfiltration of personal data creates legal obligations that Sportetitive must meet regardless of the operational recovery timeline.</p>
+        </div>
+        <div class="ico-cards reveal">
+          <div class="ico-card">
+            <h3>72-hour notification (Article 33 / DPA 2018 s.108)</h3>
+            <p>Where a personal data breach is likely to result in a risk to the rights and freedoms of individuals, the ICO must be notified without undue delay and, where feasible, within 72 hours of becoming aware of the breach.</p>
+            <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO breach notification portal &rarr;</a>
+          </div>
+          <div class="ico-card">
+            <h3>Individual notification (Article 34)</h3>
+            <p>If the breach is likely to result in high risk to individuals (fraud, identity theft), those individuals must be notified directly and without undue delay. 60,000+ customer records breached meets this threshold.</p>
+            <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-data-breaches/personal-data-breaches-a-guide/" target="_blank" rel="noopener noreferrer">ICO guidance on individual notification &rarr;</a>
+          </div>
+          <div class="ico-card">
+            <h3>Potential enforcement action</h3>
+            <p>The ICO can issue enforcement notices, monetary penalties (up to &pound;17.5m or 4% of global turnover for the most serious breaches), and public reprimands. A cooperative, transparent response demonstrably reduces enforcement risk.</p>
+            <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/personal-data-breaches/" target="_blank" rel="noopener noreferrer">ICO guide to data breach obligations &rarr;</a>
+          </div>
+          <div class="ico-card">
+            <h3>DPA 2018 s.108 &mdash; UK-specific obligation</h3>
+            <p>The Data Protection Act 2018, section 108 mirrors the UK GDPR Article 33 obligation but applies to all UK data controllers, including those processing data solely within the UK. This applies to Sportetitive&apos;s employee records as well as customer data.</p>
+            <a href="https://www.legislation.gov.uk/ukpga/2018/12/section/108" target="_blank" rel="noopener noreferrer">DPA 2018, s.108 on legislation.gov.uk &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Business impact by function</h2>
+          <p>The ransomware attack disrupted operations across every part of Sportetitive&apos;s business simultaneously, creating cascading failures that a single-point response would not address.</p>
+        </div>
+        <div class="impact-grid reveal">
+          <div class="impact-card"><h3>Trading operations</h3><ul><li>All six stores closed for at least 24 hours</li><li>E-commerce platform offline for 11 days</li><li>Manual stock management until IMS restoration</li><li>Estimated &pound;480,000 in trading revenue lost</li></ul></div>
+          <div class="impact-card"><h3>Customer trust</h3><ul><li>60,000+ customers notified of data exposure</li><li>Social media posts from customers within hours</li><li>Negative press coverage during ICO investigation</li><li>Customer retention risk during recovery period</li></ul></div>
+          <div class="impact-card"><h3>Regulatory</h3><ul><li>ICO formal investigation opened</li><li>Mandatory 72-hour notification deadline activated</li><li>Potential enforcement action if response inadequate</li><li>Obligation to notify individuals at high risk</li></ul></div>
+          <div class="impact-card"><h3>Financial</h3><ul><li>&pound;1.3m total incident cost to date</li><li>Forensic specialists, legal, IT overtime</li><li>Insurance claim processing delays</li><li>Increased cyber insurance premiums expected</li></ul></div>
+          <div class="impact-card"><h3>People</h3><ul><li>All 125 employees&apos; personal data breached</li><li>IT team under extreme pressure for 72+ hours</li><li>Store staff and management distress and uncertainty</li><li>CHRO welfare support obligation activated</li></ul></div>
+          <div class="impact-card"><h3>Supplier and MSP trust</h3><ul><li>Spherical Services access suspended mid-incident</li><li>MSP security practices now under formal review</li><li>Supplier governance gaps exposed</li><li>POS vendor relationship and SphereSales v4 risk identified</li></ul></div>
+        </div>
+        <div class="cta-row reveal">
+          <a class="btn btn-primary" href="./incident-response.html">How we respond &rarr;</a>
+          <a class="btn btn-ghost" href="./frameworks.html">View full MITRE ATT&amp;CK mapping &rarr;</a>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><span>Attack &amp; impact</span><span>Sportetitive scenario analysis</span></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <div><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">72h Playbook</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
+      </nav>
+      <div class="footer-legal">
+        <span>Sportetitive Ltd &middot; Norwich, East of England</span>
+        <span>External reporting: <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud</a> &middot; <a href="https://report.ncsc.gov.uk" target="_blank" rel="noopener noreferrer">NCSC</a> &middot; <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

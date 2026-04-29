@@ -1,56 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Incident Response | Sportetitive</title>
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://api.fontshare.com"/>
+  <link rel="stylesheet" href="./base.css"/>
+  <link rel="stylesheet" href="./style.css"/>
   <script defer src="./app.js"></script>
+  <title>72-Hour Playbook | Sportetitive Cyber Resilience Portal</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="./index.html">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <span class="brand-name"><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html">Overview</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./attack-impact.html">Attack &amp; Impact</a>
-        <a href="./incident-response.html">Response</a>
+        <a href="./incident-response.html" aria-current=page>72h Playbook</a>
         <a href="./frameworks.html">Frameworks</a>
         <a href="./leadership-roles.html">Leadership</a>
         <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow">Controlled response</div>
-        <h1>Incident response must be visible, coordinated, and evidence-led</h1>
-        <p>The response model should protect people, preserve evidence, restore services safely, and maintain management accountability. It must also recognise that ransomware response is not only technical; communication, compliance, finance, welfare, and supplier coordination matter throughout the lifecycle.</p>
-      </div>
-    </section>
 
-    <section class="section">
+    <section class="page-hero page-hero-urgent">
       <div class="container">
-        <div class="phase-grid">
-          <article class="phase-card"><span>Preparation</span><h3>Build response before the crisis</h3><p>Maintain an offline playbook, escalation contacts, role-specific checklists, backup evidence, supplier routes, insurer information, and tabletop exercises. Preparation is what makes response practical under pressure.</p></article>
-          <article class="phase-card"><span>Detection</span><h3>Define scope quickly</h3><p>Identify suspicious access, outages, disabled protections, unusual data movement, and service impact quickly so management understands severity, affected systems, and potential personal data exposure.</p></article>
-          <article class="phase-card"><span>Containment</span><h3>Limit spread without losing evidence</h3><p>Isolate affected systems, disable compromised accounts, restrict risky remote access, and preserve logs and forensic evidence so the threat is slowed without destroying the record of what happened.</p></article>
-          <article class="phase-card"><span>Eradication</span><h3>Remove unsafe persistence</h3><p>Remove malware, persistence mechanisms, unsafe access paths, and compromised credentials. Systems that cannot be trusted should be rebuilt from clean baselines rather than assumed safe.</p></article>
-          <article class="phase-card"><span>Recovery</span><h3>Restore in business order</h3><p>Restore services from clean and tested backups in a business-led order, beginning with critical functions such as identity, communications, website, inventory, and essential store operations.</p></article>
-          <article class="phase-card"><span>Lessons learned</span><h3>Translate evidence into resilience</h3><p>Brief the board on root cause, response quality, legal exposure, supplier issues, cost, staff impact, and required investment so the organisation becomes stronger after stabilisation.</p></article>
+        <div class="eyebrow">Incident Response Plan &amp; 72-Hour Playbook</div>
+        <h1>What Sportetitive does in the first 72 hours of a ransomware attack</h1>
+        <p class="page-hero-copy">This is the operational guide for all employees and senior management. If Sportetitive suspects or confirms a ransomware attack, data breach, or major system outage, this page is the single reference point. Every role, every hour, every decision &mdash; in order. Aligned with NIST SP 800-61, NCSC ransomware guidance, ICO breach-reporting obligations, and the UK Data Protection Act 2018, section 108.</p>
+        <div class="hero-alert">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Under active attack? Jump to <a href="#h01">Hour 0&ndash;1</a>. Do <strong>not</strong> pay any ransom. Do <strong>not</strong> wipe systems before forensics. Report: <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud 0300 123 2040</a>.</span>
+        </div>
+        <div class="hero-refs" style="margin-top:var(--space-4)">
+          <a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" target="_blank" rel="noopener noreferrer">NCSC ransomware guidance</a>
+          <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf" target="_blank" rel="noopener noreferrer">NIST SP 800-61r2</a>
+          <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO breach notification</a>
+          <a href="https://www.legislation.gov.uk/ukpga/2018/12/section/108" target="_blank" rel="noopener noreferrer">DPA 2018 s.108</a>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><span>Incident response</span><span>Ransomware playbook overview</span></div></footer>
+    <section class="section" id="activation">
+      <div class="container">
+        <h2 class="section-title reveal">When to activate this plan</h2>
+        <p class="section-intro reveal">This plan is activated immediately &mdash; not after discussion &mdash; if <em>any single</em> trigger below is observed.</p>
+        <div class="trigger-grid reveal">
+          <div class="trigger-card"><h3>Ransomware indicators</h3><ul><li>Files renamed with unknown extensions</li><li>Ransom note files appearing on desktops or shared drives</li><li>Systems unavailable or unresponsive without explanation</li><li>Web services suddenly offline</li><li>Unusual mass file changes across the network</li></ul></div>
+          <div class="trigger-card"><h3>Suspected data theft</h3><ul><li>Attacker claims to hold personal data</li><li>Large or unusual outbound transfers in network logs</li><li>Customer or employee data found outside approved systems</li><li>Unexplained access to database servers at unusual times</li></ul></div>
+          <div class="trigger-card"><h3>Account or supplier compromise</h3><ul><li>Admin account login from unexpected location</li><li>Senior mailbox accessed without the person&apos;s knowledge</li><li>MSP remote access during unauthorised hours</li><li>MFA prompt received without attempting login</li></ul></div>
+          <div class="trigger-card"><h3>Critical service outage</h3><ul><li>IMS unavailable or not updating</li><li>Website unreachable without a known cause</li><li>POS tills not connecting to central inventory</li><li>Backup platform inaccessible</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Severity levels</h2>
+        <div class="severity-table reveal">
+          <div class="sev-row sev-1"><div class="sev-label"><strong>SEV-1 Critical</strong></div><div class="sev-desc"><p>Major business disruption. Confirmed ransomware. Confirmed or likely personal-data exposure. Loss of multiple critical systems.</p></div><div class="sev-action"><strong>Escalate to:</strong> CEO, CIO, CTO, CFO, CHRO, NED compliance, cyber insurer, forensic provider, Police, ICO assessment.</div></div>
+          <div class="sev-row sev-2"><div class="sev-label"><strong>SEV-2 High</strong></div><div class="sev-desc"><p>Serious compromise with limited spread. Credible attacker access but not yet enterprise-wide. MSP compromise, privileged account misuse.</p></div><div class="sev-action"><strong>Escalate to:</strong> CIO, CTO, IT Manager, NED compliance. Insurer notified.</div></div>
+          <div class="sev-row sev-3"><div class="sev-label"><strong>SEV-3 Medium</strong></div><div class="sev-desc"><p>Contained incident. No confirmed personal-data exposure or operational disruption. Isolated malware, contained phishing click.</p></div><div class="sev-action"><strong>Escalate to:</strong> CTO and IT Manager. CIO informed.</div></div>
+          <div class="sev-row sev-4"><div class="sev-label"><strong>SEV-4 Low</strong></div><div class="sev-desc"><p>Suspicious activity requiring investigation. No confirmed compromise. Suspicious email, failed login spike, blocked attachment.</p></div><div class="sev-action"><strong>Action:</strong> IT Manager triages and records. No external escalation required.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="h01">
+      <div class="container">
+        <h2 class="section-title reveal">72-hour response timeline</h2>
+        <p class="section-intro reveal">Operational checklist. Record each completed action in the incident log with timestamp, owner, and outcome. The incident log is a legal record.</p>
+
+        <div class="playbook-block reveal">
+          <div class="pb-header pb-critical">
+            <div class="pb-time">Hour 0 &ndash; 1</div>
+            <h3>Contain, isolate, preserve</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO / CTO:</strong> Declare incident severity (SEV-1 for confirmed ransomware). Activate the crisis group. Start the incident log &mdash; record every decision, action, time, and owner from this moment.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO / IT Manager:</strong> Isolate affected systems from the network immediately. Disconnect infected servers and workstations from LAN and WiFi &mdash; do <strong>NOT</strong> wipe or power them off. Forensic evidence is on those disks.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO / IT Manager:</strong> Disable every account that may have been compromised &mdash; starting with domain administrator accounts. Revoke active sessions and OAuth tokens.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>IT Manager:</strong> Preserve logs immediately &mdash; firewall, VPN, domain controller, email, cloud audit, endpoint protection, POS segment, and MSP access records. Store copies somewhere the attacker cannot reach.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO / CTO:</strong> Suspend all Spherical Services (MSP) remote access immediately. No supplier access until reviewed, approved, and fully monitored.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO:</strong> Assess POS systems (SphereSales v4). If POS cloud is unaffected and isolated from compromised network, stores may operate &mdash; confirm before any store opens.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO:</strong> Brief the CEO. Agree internal holding message. No external statements yet. Close stores and send non-essential staff home.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>All staff:</strong> Do not open unexpected emails. Do not click links. Do not log in to any system unless IT instructs you to. Report anything suspicious to the IT Manager immediately by phone.</span></label>
+            </div>
+            <div class="pb-links">
+              <a href="https://www.ncsc.gov.uk/section/about-this-website/what-is-ncsc" target="_blank" rel="noopener noreferrer">NCSC incident guidance</a>
+              <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud: 0300 123 2040</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-block reveal" id="h14">
+          <div class="pb-header pb-high">
+            <div class="pb-time">Hour 1 &ndash; 4</div>
+            <h3>Activate external support &amp; damage assessment</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>CFO / CIO:</strong> Contact the cyber insurance provider. Provide policy reference. Request breach-coach access, forensic provider authorisation, and legal support. Only engage externals approved by the insurer.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO / NED Compliance:</strong> Begin personal data breach assessment. What data may have been accessed? Customer records, employee records, payroll? Document in the incident log even if incomplete.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CFO:</strong> Log all costs from this moment &mdash; overtime, external services, downtime, supplier costs. Required for insurance claim and board reporting.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO / IT Manager:</strong> Build the system-impact map. Which servers and services are affected, clean, or uncertain? Document every system with its current status.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>IT Manager:</strong> Confirm whether backups are intact and segregated from the compromised domain. Do not attempt restoration yet &mdash; confirm backup safety first.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>Board:</strong> Confirm the no-ransom-payment position. NCSC and NCA advise strongly against payment. It does not guarantee decryption, does not delete stolen data, and funds further attacks.</span></label>
+            </div>
+            <div class="pb-links">
+              <a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" target="_blank" rel="noopener noreferrer">NCSC ransomware guidance</a>
+              <a href="https://www.nationalcrimeagency.gov.uk/what-we-do/crime-threats/cyber-crime/ransomware" target="_blank" rel="noopener noreferrer">NCA ransomware guidance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-block reveal" id="h412">
+          <div class="pb-header pb-medium">
+            <div class="pb-time">Hour 4 &ndash; 12</div>
+            <h3>Evidence preservation &amp; containment decisions</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO + Forensic provider:</strong> Preserve forensic evidence from all affected systems. Capture disk images, memory dumps, volatile data. Preserve firewall logs, VPN logs, email server logs, domain controller events, cloud audit trails, and the full ransom message including headers.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO:</strong> Confirm scope of ransomware spread. Which network segments are encrypted? Has the attack reached cloud services, cloud backups, or POS? Document every confirmed affected system.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>IT Manager:</strong> Block malicious domains and IP addresses at the firewall. Disable SMB if ransomware is spreading laterally. Block unusual outbound traffic.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO:</strong> Brief the board on current impact, affected systems, personal-data risk, and what remains unknown. Record all board decisions and reasoning.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>NED Compliance:</strong> Review mailbox rules on compromised accounts. Remove attacker-set forwarding rules or delegated permissions. Preserve copies before removal.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-block reveal" id="h1224">
+          <div class="pb-header pb-medium">
+            <div class="pb-time">Hour 12 &ndash; 24</div>
+            <h3>Communications, regulatory preparation &amp; operational decisions</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>Communications Lead + CIO:</strong> Inform all employees: the business has been attacked by cybercriminals and their personal data may have been exposed. Advise them to be vigilant about phishing and to change passwords on other sites where they used the same credentials.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>Communications Lead + CEO:</strong> Prepare a customer holding statement if services remain offline. Acknowledge the disruption. Do not confirm data breach details until after ICO notification is prepared.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO + NED Compliance:</strong> Continue personal data breach assessment. Confirm whether the 72-hour ICO notification window applies. Under DPA 2018 s.108 and UK GDPR Article 33, notification must be made without undue delay and where feasible within 72 hours of becoming aware.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CFO:</strong> Report to Action Fraud to obtain a crime reference number. Required for insurance claim. <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">actionfraud.police.uk</a> or 0300 123 2040.</span></label>
+            </div>
+            <div class="pb-links">
+              <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO breach notification portal</a>
+              <a href="https://www.legislation.gov.uk/ukpga/2018/12/section/108" target="_blank" rel="noopener noreferrer">DPA 2018, s.108</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-block reveal" id="h2448">
+          <div class="pb-header pb-low">
+            <div class="pb-time">Hour 24 &ndash; 48</div>
+            <h3>Investigation depth &amp; ICO notification preparation</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>Forensic provider + CTO:</strong> Identify the initial intrusion route, confirm affected data categories, trace lateral movement, preserve evidence for Police, ICO, and insurer use.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO + NED Compliance:</strong> Prepare ICO notification. Must include: what happened, data affected, approximate number of individuals, categories of people, likely consequences, containment steps, and remediation actions. Submit what is known; supplement as investigation continues.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>NED Compliance:</strong> Assess whether affected customers and employees must be individually notified under UK GDPR Article 34. Required if breach is likely to result in high risk (fraud, identity theft, financial loss). Document the risk assessment.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>IT Manager + CTO:</strong> Validate backup integrity without connecting backups to the compromised environment. Confirm backup files are not encrypted and backup credentials are fully separated from compromised domain admin credentials.</span></label>
+            </div>
+            <div class="pb-links">
+              <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO breach notification portal</a>
+              <a href="https://report.ncsc.gov.uk" target="_blank" rel="noopener noreferrer">NCSC report a cyber incident</a>
+              <a href="https://www.actionfraud.police.uk/reporting-fraud" target="_blank" rel="noopener noreferrer">Action Fraud reporting</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-block reveal" id="h4872">
+          <div class="pb-header pb-recovery">
+            <div class="pb-time">Hour 48 &ndash; 72</div>
+            <h3>ICO submission &amp; controlled recovery start</h3>
+          </div>
+          <div class="pb-body">
+            <div class="pb-checklist">
+              <label class="pb-item"><input type="checkbox"><span><strong>CIO + NED Compliance:</strong> Submit ICO notification. Record submission time and reference number. Provide supplementary information as investigation progresses.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>Communications Lead + CEO:</strong> If customer personal data is confirmed exfiltrated, notify affected customers without undue delay. Explain what happened, what data is involved, likely impact, and what steps they should take.</span></label>
+              <label class="pb-item"><input type="checkbox"><span><strong>CTO + Forensic provider:</strong> Begin eradication once scope is fully understood. Remove malware, persistence mechanisms, attacker accounts, and unsafe access routes. Reset all administrator, service, backup, cloud, email, POS-support, and MSP credentials.</span></label>
+            </div>
+            <div class="recovery-order">
+              <div class="ro-item"><span>1</span><div><strong>Identity &amp; secure admin</strong><p>No other system is restored until admin access routes are completely clean and MFA is enforced on all privileged accounts.</p></div></div>
+              <div class="ro-item"><span>2</span><div><strong>Network core, firewall &amp; centralised logging</strong><p>Monitoring must be operational before any system reconnects to the network.</p></div></div>
+              <div class="ro-item"><span>3</span><div><strong>Customer &amp; employee data stores</strong><p>Integrity validation and access-control verification required before use. Forensic sign-off mandatory.</p></div></div>
+              <div class="ro-item"><span>4</span><div><strong>Inventory Management System (IMS)</strong><p>Stock replenishment and operational continuity depend on IMS.</p></div></div>
+              <div class="ro-item"><span>5</span><div><strong>Website &amp; online trading</strong><p>Customer-facing systems only after security validation. Rushed restoration risks re-infection.</p></div></div>
+              <div class="ro-item"><span>6</span><div><strong>Store systems &amp; POS integration</strong><p>POS reconnection only when both central systems and POS segment are confirmed safe.</p></div></div>
+              <div class="ro-item"><span>7</span><div><strong>Reporting &amp; lower-priority systems</strong><p>Analytics and non-essential tools last, after critical services are fully stable.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Board decision guide</h2>
+          <p>These decisions must be made explicitly by the board during the first 72 hours and recorded in the incident log with full reasoning.</p>
+        </div>
+        <div class="decision-table reveal">
+          <div class="dt-row"><div class="dt-q">Should stores close?</div><div class="dt-a">Close only where safety cannot be confirmed. If POS and store systems are segregated from compromised corporate systems, stores should operate. Closure when unnecessary adds financial harm. Reopen as soon as CTO and CIO confirm safety.</div></div>
+          <div class="dt-row"><div class="dt-q">Should the ransom be paid?</div><div class="dt-a">No payment by default. NCSC and NCA are clear: payment does not guarantee decryption, does not delete stolen data, and funds further criminal activity. Any exception requires board approval, insurer sign-off, and documented legal advice.</div></div>
+          <div class="dt-row"><div class="dt-q">Should we contact the attackers?</div><div class="dt-a">Only through approved channels. No individual should contact attackers directly. Any contact goes through the insurer&apos;s breach coach, legal advisers, or law-enforcement-supported channels.</div></div>
+          <div class="dt-row"><div class="dt-q">When do we notify customers?</div><div class="dt-a">Once personal-data breach is confirmed. Do not wait for absolute certainty if delay increases harm. Customer notification should be honest, specific about what is known, and include what customers should do.</div></div>
+          <div class="dt-row"><div class="dt-q">Should systems be wiped immediately?</div><div class="dt-a">No. Preserve forensic evidence first. Wiping systems before forensic capture destroys the record needed for police, insurance, ICO, and lessons-learned purposes.</div></div>
+          <div class="dt-row"><div class="dt-q">Can Spherical Services access systems?</div><div class="dt-a">Only with strict controls. MSP access remains suspended until a new monitored, time-limited access method is established with full logging. MSP systems must be confirmed clean before access is restored.</div></div>
+        </div>
+        <div class="cta-row reveal">
+          <a class="btn btn-primary" href="./recommendations.html">Strategic improvement plan &rarr;</a>
+          <a class="btn btn-ghost" href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" target="_blank" rel="noopener noreferrer">NCSC ransomware recovery guidance &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <div><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">72h Playbook</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
+      </nav>
+      <div class="footer-legal">
+        <span>Sportetitive Ltd &middot; Norwich, East of England</span>
+        <span>External reporting: <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud</a> &middot; <a href="https://report.ncsc.gov.uk" target="_blank" rel="noopener noreferrer">NCSC</a> &middot; <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

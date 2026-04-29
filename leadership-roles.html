@@ -1,59 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leadership Roles | Sportetitive</title>
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://api.fontshare.com"/>
+  <link rel="stylesheet" href="./base.css"/>
+  <link rel="stylesheet" href="./style.css"/>
   <script defer src="./app.js"></script>
+  <title>Leadership Roles | Sportetitive Cyber Resilience Portal</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="./index.html">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <span class="brand-name"><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html">Overview</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./attack-impact.html">Attack &amp; Impact</a>
-        <a href="./incident-response.html">Response</a>
+        <a href="./incident-response.html">72h Playbook</a>
         <a href="./frameworks.html">Frameworks</a>
-        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./leadership-roles.html" aria-current=page>Leadership</a>
         <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-
   <main id="main">
+
     <section class="page-hero">
       <div class="container">
-        <div class="eyebrow">Shared ownership</div>
-        <h1>Cyber resilience depends on clear leadership ownership across the organisation</h1>
-        <p>No single executive can manage a ransomware crisis alone. Response quality depends on clear ownership across business leadership, technical leadership, compliance, HR, finance, communications, and external partners.</p>
+        <div class="eyebrow">Leadership &amp; Role Ownership</div>
+        <h1>Who owns what in a cyber incident at Sportetitive</h1>
+        <p class="page-hero-copy">Cyber incidents fail at the handover points &mdash; where no single person believed they were responsible. This page makes ownership explicit across every leadership role and every phase of response. No responsibility should fall through the gaps. All roles, all phases, all decisions, assigned.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="role-grid">
-          <article class="role-card"><span>CEO</span><h3>Leads business direction</h3><p>Chairs the executive crisis group, approves major operational and public decisions, and keeps management priorities aligned with the wider business response.</p></article>
-          <article class="role-card"><span>CIO</span><h3>Owns business risk translation</h3><p>Owns impact assessment, board reporting, recovery priorities, supplier governance, and strategic decision logging so technical risk becomes business risk insight.</p></article>
-          <article class="role-card"><span>CTO</span><h3>Leads technical response</h3><p>Directs containment, forensic coordination, eradication, and restoration sequencing so the technical response remains controlled and evidence-based.</p></article>
-          <article class="role-card"><span>IT Manager</span><h3>Executes operational actions</h3><p>Supports forensic investigation, preserves logs, and coordinates the internal IT team under intense response pressure.</p></article>
-          <article class="role-card"><span>CFO</span><h3>Controls cost and insurer action</h3><p>Handles insurer engagement, cost tracking, emergency spending, procurement, and financial impact reporting during fast-moving decisions.</p></article>
-          <article class="role-card"><span>CHRO / HR</span><h3>Protects people and resilience</h3><p>Supports staff communication, fatigue management, rota planning, wellbeing, and human-factor controls such as awareness and social engineering resilience.</p></article>
-          <article class="role-card"><span>NED compliance</span><h3>Supports regulatory reasoning</h3><p>Helps with breach assessment, evidence logging, affected-individual risk assessment, and notification decisions where required.</p></article>
-          <article class="role-card"><span>Communications</span><h3>Owns message discipline</h3><p>Controls internal, customer, supplier, and media messaging so updates remain accurate, timely, and consistent during a high-pressure incident.</p></article>
-          <article class="role-card"><span>External partners</span><h3>Support under governance</h3><p>Insurers, forensic specialists, police, legal advisers, and the MSP play defined supporting roles but should operate under monitored, approved, and documented arrangements.</p></article>
+        <div class="section-header reveal">
+          <h2>Executive ownership matrix</h2>
+          <p>Every function in a cyber crisis is assigned to a specific role. Multiple roles are listed for shared responsibility areas. &ldquo;Accountable&rdquo; means the decision rests with that role. &ldquo;Responsible&rdquo; means that role does the work. &ldquo;Consulted&rdquo; means that role&apos;s input is required. &ldquo;Informed&rdquo; means that role must be kept updated.</p>
+        </div>
+        <div class="raci-table reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Crisis function</th>
+                <th>CEO</th>
+                <th>CIO</th>
+                <th>CTO</th>
+                <th>CFO</th>
+                <th>CHRO</th>
+                <th>NED</th>
+                <th>IT Manager</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Declare the incident and activate crisis plan</td><td class="r-a">A</td><td class="r-r">R</td><td class="r-r">R</td><td class="r-i">I</td><td class="r-i">I</td><td class="r-i">I</td><td class="r-r">R</td></tr>
+              <tr><td>Technical containment and isolation</td><td class="r-i">I</td><td class="r-a">A</td><td class="r-r">R</td><td></td><td></td><td></td><td class="r-r">R</td></tr>
+              <tr><td>Evidence preservation and forensics oversight</td><td></td><td class="r-c">C</td><td class="r-a">A</td><td></td><td></td><td class="r-c">C</td><td class="r-r">R</td></tr>
+              <tr><td>Insurance activation and insurer liaison</td><td class="r-c">C</td><td class="r-r">R</td><td></td><td class="r-a">A</td><td></td><td class="r-c">C</td><td></td></tr>
+              <tr><td>Personal data breach assessment</td><td></td><td class="r-a">A</td><td class="r-c">C</td><td></td><td class="r-c">C</td><td class="r-r">R</td><td></td></tr>
+              <tr><td>ICO notification</td><td class="r-i">I</td><td class="r-a">A</td><td></td><td></td><td></td><td class="r-r">R</td><td></td></tr>
+              <tr><td>Police / Action Fraud reporting</td><td class="r-i">I</td><td class="r-c">C</td><td></td><td class="r-a">A</td><td></td><td class="r-r">R</td><td></td></tr>
+              <tr><td>Internal employee communications</td><td class="r-c">C</td><td class="r-r">R</td><td></td><td></td><td class="r-a">A</td><td class="r-c">C</td><td></td></tr>
+              <tr><td>Customer and external communications</td><td class="r-a">A</td><td class="r-r">R</td><td></td><td class="r-c">C</td><td></td><td class="r-c">C</td><td></td></tr>
+              <tr><td>Cost logging and financial impact tracking</td><td class="r-i">I</td><td class="r-c">C</td><td></td><td class="r-a">A</td><td></td><td></td><td></td></tr>
+              <tr><td>Store and operations decisions</td><td class="r-a">A</td><td class="r-r">R</td><td class="r-c">C</td><td class="r-c">C</td><td></td><td></td><td></td></tr>
+              <tr><td>MSP access management and suspension</td><td></td><td class="r-a">A</td><td class="r-r">R</td><td></td><td></td><td class="r-c">C</td><td class="r-r">R</td></tr>
+              <tr><td>Recovery prioritisation and execution</td><td class="r-c">C</td><td class="r-a">A</td><td class="r-r">R</td><td></td><td></td><td></td><td class="r-r">R</td></tr>
+              <tr><td>Post-incident review and lessons learned</td><td class="r-i">I</td><td class="r-a">A</td><td class="r-r">R</td><td class="r-c">C</td><td class="r-c">C</td><td class="r-r">R</td><td class="r-r">R</td></tr>
+              <tr><td>Staff welfare and HR support</td><td class="r-i">I</td><td></td><td></td><td></td><td class="r-a">A</td><td class="r-c">C</td><td></td></tr>
+            </tbody>
+          </table>
+          <div class="raci-legend">
+            <span><strong>A</strong> = Accountable (decision rests here)</span>
+            <span><strong>R</strong> = Responsible (does the work)</span>
+            <span><strong>C</strong> = Consulted (input required)</span>
+            <span><strong>I</strong> = Informed (kept updated)</span>
+          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><span>Leadership roles</span><span>Shared executive ownership model</span></div></footer>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Role profiles &mdash; what each leader must do</h2>
+        </div>
+        <div class="role-grid reveal">
+          <div class="role-card">
+            <h3>Chief Executive Officer (CEO)</h3>
+            <p class="role-when">First action within 30 minutes of SEV-1 declaration.</p>
+            <p>Ultimate accountability for the crisis response rests with the CEO. The CEO decides on store closures and reopening, approves all external communications and customer notifications, confirms the no-ransom policy with the board, and manages stakeholder relationships including suppliers, investors, and media. All external statements go through the CEO.</p>
+          </div>
+          <div class="role-card">
+            <h3>Chief Information Officer (CIO)</h3>
+            <p class="role-when">First action within 15 minutes of SEV-1 declaration.</p>
+            <p>The CIO coordinates the overall incident response. They own the ICO notification obligation, manage the relationship with the cyber insurer and forensic providers, brief the board on technical developments in plain language, and are accountable for the personal data breach assessment. The CIO is the bridge between technical response (CTO) and business and regulatory decisions (CEO, NED, CFO).</p>
+          </div>
+          <div class="role-card">
+            <h3>Chief Technology Officer (CTO)</h3>
+            <p class="role-when">First action: immediately on confirmation of incident.</p>
+            <p>The CTO leads all technical response actions. Containment, isolation, forensic evidence preservation, and recovery sequencing all fall under the CTO&apos;s ownership. The CTO is accountable for the system-impact map, for confirming backup integrity, for managing the forensic provider relationship, and for making the recovery technically safe before any system is reconnected.</p>
+          </div>
+          <div class="role-card">
+            <h3>Chief Financial Officer (CFO)</h3>
+            <p class="role-when">First action within 1 hour of SEV-1 declaration.</p>
+            <p>The CFO activates the cyber insurance policy and manages the insurer relationship. They own cost logging from the moment the incident begins, report the incident to Action Fraud to obtain a crime reference number, manage emergency budget approvals for response expenditure, and provide the board with financial impact reporting throughout the incident.</p>
+          </div>
+          <div class="role-card">
+            <h3>Chief HR Officer (CHRO)</h3>
+            <p class="role-when">First action within 2 hours of SEV-1 declaration.</p>
+            <p>The CHRO is responsible for all employee welfare decisions during the crisis. They manage the notification to employees that their personal data may have been breached, ensure IT staff receive rest and welfare support during extended response periods, coordinate working arrangements, and advise on communications to staff. The CHRO also manages the employment relationship with any staff whose accounts or actions may require investigation.</p>
+          </div>
+          <div class="role-card">
+            <h3>Non-Executive Director &mdash; Compliance</h3>
+            <p class="role-when">Involved from ICO notification preparation stage.</p>
+            <p>The NED compliance role provides independent oversight of the regulatory response. They review the ICO notification before submission, advise on the risk assessment for individual customer notification, ensure board decisions are made and recorded in a legally defensible manner, and challenge the CIO on whether the response meets the legal obligations under the Data Protection Act 2018 and UK GDPR.</p>
+          </div>
+          <div class="role-card">
+            <h3>IT Manager</h3>
+            <p class="role-when">First responder &mdash; immediate technical execution role.</p>
+            <p>The IT Manager is the hands-on technical first responder. They execute the technical containment actions under the CTO&apos;s direction: isolating systems, preserving logs, disabling compromised accounts, blocking malicious traffic, confirming backup status, and briefing the CTO continuously. The IT Manager is the primary operational point of contact for forensic providers and the MSP suspension.</p>
+          </div>
+          <div class="role-card">
+            <h3>Spherical Services (MSP)</h3>
+            <p class="role-when">Access suspended immediately at Hour 0&ndash;1. Reinstate with controls only when confirmed safe.</p>
+            <p>The MSP&apos;s access is suspended at the start of the incident because the attack entered through MSP credentials. Before any access is restored, the MSP must confirm their own systems are clean, adopt a new monitored and time-limited access method with full logging, and accept a formal supplier security review. The MSP is a critical partner but must operate under tighter contractual security obligations going forward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <div class="callout">
+          <h2>Decisions made without an incident log are decisions that cannot be defended.</h2>
+          <p>Every decision, every instruction, every escalation during a cyber incident must be documented in real time with the decision-maker&apos;s name, the time, and the reasoning. The incident log is the primary evidence for the ICO investigation, the insurance claim, and the post-incident review. It is a legal document from the moment it is started.</p>
+          <a class="btn btn-primary" href="./incident-response.html">Back to the playbook &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 32 L21 16 L25.5 26 L31 13 L31 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="36" cy="14" r="3" fill="currentColor"/></svg>
+        <div><strong>Sportetitive</strong><span>Cyber Resilience Portal</span></div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="./index.html">Home</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">72h Playbook</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
+      </nav>
+      <div class="footer-legal">
+        <span>Sportetitive Ltd &middot; Norwich, East of England</span>
+        <span>External reporting: <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">Action Fraud</a> &middot; <a href="https://report.ncsc.gov.uk" target="_blank" rel="noopener noreferrer">NCSC</a> &middot; <a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer">ICO</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
