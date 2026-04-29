@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommendations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">Sportetitive Resilience</div>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="attack-impact.html">Attack &amp; Impact</a>
+        <a href="incident-response.html">Incident Response</a>
+        <a href="leadership-roles.html">Leadership Roles</a>
+        <a href="frameworks.html">MITRE &amp; Zero Trust</a>
+        <a href="recommendations.html" class="active">Recommendations</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <p class="eyebrow">Strategic improvement actions</p>
+      <h1>What Sportetitive should improve next</h1>
+      <p class="lead">The organisation should move beyond immediate recovery and build a stronger resilience model. The recommendations below focus on the weaknesses exposed by the incident and the governance improvements needed to reduce repeat risk.</p>
+
+      <div class="framework-list">
+        <div class="framework-item"><h2>Strengthen identity security</h2><p>Implement MFA across email, cloud, VPN, privileged accounts, backups and supplier access. Separate admin accounts, reduce standing privilege and review access rights regularly.</p></div>
+        <div class="framework-item"><h2>Improve supplier governance</h2><p>Require stronger supplier access controls, clearer contractual obligations, monitoring, incident notification duties and regular assurance reviews for critical third parties.</p></div>
+        <div class="framework-item"><h2>Address the legacy POS risk</h2><p>Treat the POS platform as a board-level risk. Use compensating controls in the short term and build a replacement or redesign roadmap in the medium term.</p></div>
+        <div class="framework-item"><h2>Increase monitoring and detection</h2><p>Expand logging, alerting and endpoint visibility so unusual logins, privilege changes, tool disablement and suspicious data movement can be identified earlier.</p></div>
+        <div class="framework-item"><h2>Strengthen backup resilience</h2><p>Maintain segregated, tested and trusted backups, supported by documented recovery priorities and regular restore exercises.</p></div>
+        <div class="framework-item"><h2>Improve governance and exercises</h2><p>Run tabletop exercises, board reviews and lessons-learned sessions regularly. Cyber risk should be visible on the risk register and tracked through meaningful board metrics.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
