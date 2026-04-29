@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MITRE and Zero Trust</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Frameworks | Sportetitive</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand">Sportetitive Resilience</div>
-      <nav>
-        <a href="index.html">Overview</a>
-        <a href="attack-impact.html">Attack &amp; Impact</a>
-        <a href="incident-response.html">Incident Response</a>
-        <a href="leadership-roles.html">Leadership Roles</a>
-        <a href="frameworks.html" class="active">MITRE &amp; Zero Trust</a>
-        <a href="recommendations.html">Recommendations</a>
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">Response</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container narrow">
-      <p class="eyebrow">Framework-based analysis</p>
-      <h1>MITRE ATT&amp;CK explains the attack path, while Zero Trust explains the control response</h1>
-      <p class="lead">MITRE ATT&amp;CK helps the board understand how the attackers moved from initial contact to business impact. Zero Trust then provides a practical control narrative built on strong authentication, least privilege, segmentation, monitoring and supplier verification.</p>
-
-      <div class="framework-list">
-        <div class="framework-item"><h2>Reconnaissance and initial access</h2><p>The attackers used public information and a convincing phishing route through a supplier relationship. The response lesson is that external trust should never replace proper verification.</p></div>
-        <div class="framework-item"><h2>Credential access</h2><p>Captured privileged credentials allowed the attackers to avoid repeated intrusion effort. The control lesson is that identity should be strongly protected through MFA, admin separation and access review.</p></div>
-        <div class="framework-item"><h2>Lateral movement</h2><p>Broad access and insufficient segmentation allowed the attackers to move further than they should have. Zero Trust reduces this by limiting what users, devices and suppliers can reach.</p></div>
-        <div class="framework-item"><h2>Exfiltration and impact</h2><p>The theft of personal data and encryption of systems created a dual crisis of availability and legal exposure. The control response includes better monitoring, data protection, backup resilience and incident readiness.</p></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Framework view</div>
+        <h1>MITRE ATT&amp;CK explains the attack path, while Zero Trust explains the control response</h1>
+        <p>MITRE ATT&amp;CK helps the board understand how the attackers moved from initial contact to business impact. Zero Trust then provides a practical control narrative built on strong authentication, least privilege, segmentation, monitoring, and supplier verification.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="framework-grid">
+          <article class="framework-card"><span>Reconnaissance</span><h3>Initial access through trust</h3><p>The attackers used public information and a convincing phishing route through a supplier relationship. The response lesson is that external trust should never replace proper verification.</p></article>
+          <article class="framework-card"><span>Credential access</span><h3>Identity became the breach multiplier</h3><p>Captured privileged credentials allowed the attackers to avoid repeated intrusion effort, showing why MFA, admin separation, and access review should be central control priorities.</p></article>
+          <article class="framework-card"><span>Lateral movement</span><h3>Broad access enabled spread</h3><p>Insufficient segmentation allowed the attackers to move further than they should have. Zero Trust reduces this by limiting what users, devices, and suppliers can reach.</p></article>
+          <article class="framework-card"><span>Exfiltration</span><h3>Data theft raised legal exposure</h3><p>The theft of personal data changed the event from outage management to regulatory risk, making monitoring, classification, and transfer visibility more important.</p></article>
+          <article class="framework-card"><span>Impact</span><h3>Encryption created board pressure</h3><p>The encryption of systems disrupted operations and intensified executive time pressure, reinforcing the need for tested backups, recovery order, and business continuity alignment.</p></article>
+          <article class="framework-card"><span>Zero Trust</span><h3>Control strategy for the future</h3><p>Zero Trust gives the CIO a business-friendly narrative: every user, device, supplier session, and administrative action should be verified, limited, and monitored.</p></article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>Frameworks</span><span>MITRE ATT&amp;CK and Zero Trust view</span></div></footer>
 </body>
 </html>

@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Incident Response</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Incident Response | Sportetitive</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand">Sportetitive Resilience</div>
-      <nav>
-        <a href="index.html">Overview</a>
-        <a href="attack-impact.html">Attack &amp; Impact</a>
-        <a href="incident-response.html" class="active">Incident Response</a>
-        <a href="leadership-roles.html">Leadership Roles</a>
-        <a href="frameworks.html">MITRE &amp; Zero Trust</a>
-        <a href="recommendations.html">Recommendations</a>
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">Response</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container narrow">
-      <p class="eyebrow">Controlled ransomware response</p>
-      <h1>Incident response must be visible, coordinated and evidence-led</h1>
-      <p class="lead">The response model should protect people, preserve evidence, restore services safely and maintain management accountability. It should also recognise that ransomware response is not only technical; communication, compliance, finance, welfare and supplier coordination matter throughout the incident lifecycle.</p>
-
-      <div class="framework-list">
-        <div class="framework-item"><h2>Preparation</h2><p>Maintain an offline playbook, escalation contacts, role-specific checklists, backup evidence, supplier routes, insurer information and tabletop exercises. Preparation is what makes response practical under pressure.</p></div>
-        <div class="framework-item"><h2>Detection</h2><p>Identify suspicious access, outages, disabled protections, unusual data movement and service impact quickly. Management must know what is affected, how severe the issue is and whether personal data may be involved.</p></div>
-        <div class="framework-item"><h2>Containment</h2><p>Isolate affected systems, disable compromised accounts, restrict risky remote access and preserve logs and forensic evidence. This phase should reduce spread without destroying the record of what happened.</p></div>
-        <div class="framework-item"><h2>Eradication</h2><p>Remove malware, persistence mechanisms, unsafe access paths and compromised credentials. Systems that cannot be trusted should be rebuilt from clean baselines rather than assumed to be safe.</p></div>
-        <div class="framework-item"><h2>Recovery</h2><p>Restore services from clean and tested backups in a business-led order, beginning with critical functions such as identity, communications, website, inventory and essential store operations. Recovery should happen alongside enhanced monitoring.</p></div>
-        <div class="framework-item"><h2>Lessons learned</h2><p>Brief the board on root cause, response quality, legal exposure, supplier issues, cost, staff impact and required investment. The playbook, training and governance metrics should then be updated so the organisation becomes more resilient.</p></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Controlled response</div>
+        <h1>Incident response must be visible, coordinated, and evidence-led</h1>
+        <p>The response model should protect people, preserve evidence, restore services safely, and maintain management accountability. It must also recognise that ransomware response is not only technical; communication, compliance, finance, welfare, and supplier coordination matter throughout the lifecycle.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="phase-grid">
+          <article class="phase-card"><span>Preparation</span><h3>Build response before the crisis</h3><p>Maintain an offline playbook, escalation contacts, role-specific checklists, backup evidence, supplier routes, insurer information, and tabletop exercises. Preparation is what makes response practical under pressure.</p></article>
+          <article class="phase-card"><span>Detection</span><h3>Define scope quickly</h3><p>Identify suspicious access, outages, disabled protections, unusual data movement, and service impact quickly so management understands severity, affected systems, and potential personal data exposure.</p></article>
+          <article class="phase-card"><span>Containment</span><h3>Limit spread without losing evidence</h3><p>Isolate affected systems, disable compromised accounts, restrict risky remote access, and preserve logs and forensic evidence so the threat is slowed without destroying the record of what happened.</p></article>
+          <article class="phase-card"><span>Eradication</span><h3>Remove unsafe persistence</h3><p>Remove malware, persistence mechanisms, unsafe access paths, and compromised credentials. Systems that cannot be trusted should be rebuilt from clean baselines rather than assumed safe.</p></article>
+          <article class="phase-card"><span>Recovery</span><h3>Restore in business order</h3><p>Restore services from clean and tested backups in a business-led order, beginning with critical functions such as identity, communications, website, inventory, and essential store operations.</p></article>
+          <article class="phase-card"><span>Lessons learned</span><h3>Translate evidence into resilience</h3><p>Brief the board on root cause, response quality, legal exposure, supplier issues, cost, staff impact, and required investment so the organisation becomes stronger after stabilisation.</p></article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>Incident response</span><span>Ransomware playbook overview</span></div></footer>
 </body>
 </html>

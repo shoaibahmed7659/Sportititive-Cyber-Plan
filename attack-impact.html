@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attack and Impact</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Attack & Impact | Sportetitive</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand">Sportetitive Resilience</div>
-      <nav>
-        <a href="index.html">Overview</a>
-        <a href="attack-impact.html" class="active">Attack &amp; Impact</a>
-        <a href="incident-response.html">Incident Response</a>
-        <a href="leadership-roles.html">Leadership Roles</a>
-        <a href="frameworks.html">MITRE &amp; Zero Trust</a>
-        <a href="recommendations.html">Recommendations</a>
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">Response</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container narrow">
-      <p class="eyebrow">Attack path and business effect</p>
-      <h1>How the incident escalated from phishing and trust abuse into a board-level crisis</h1>
-      <p class="lead">The attackers did not need a highly advanced entry technique. They succeeded by combining social engineering, supplier access, weak identity control, privileged account exposure and delayed detection. That chain turned a single compromise into widespread business disruption and a major personal data breach.</p>
-
-      <div class="framework-list">
-        <div class="framework-item"><h2>Initial targeting</h2><p>The attackers used publicly available information and supplier relationships to craft a believable approach to an MSP technician. This shows how external trust relationships can become internal risk when there is not enough verification around who is contacting whom and why.</p></div>
-        <div class="framework-item"><h2>Credential compromise</h2><p>Malware deployed through the phishing path later captured highly privileged credentials. This created a major escalation point because one powerful account gave the attackers broad access to systems, cloud services and core infrastructure.</p></div>
-        <div class="framework-item"><h2>Lateral movement</h2><p>Once inside, the attackers explored the environment, disabled protections and moved across systems without being stopped early. Weak visibility and over-trusted access made it easier for the threat to spread before the business fully understood what was happening.</p></div>
-        <div class="framework-item"><h2>Operational disruption</h2><p>Files were encrypted, the website and inventory management system became unavailable and online trading was interrupted. Store operations were also affected by uncertainty and executive decision-making pressure, even where some POS services remained operational.</p></div>
-        <div class="framework-item"><h2>Data breach impact</h2><p>Investigators later confirmed that personal data relating to at least 60,000 customers and all employees had been exposed. This changed the event from a technical outage into a serious legal and reputational issue requiring formal breach assessment and regulatory reporting.</p></div>
-        <div class="framework-item"><h2>Business consequences</h2><p>The attack created direct recovery costs, staff fatigue, insurer involvement, reputational harm, disrupted operations and fear of regulatory scrutiny. It also revealed structural weaknesses in supplier governance, privileged access design and the legacy POS environment.</p></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Attack narrative</div>
+        <h1>How the incident escalated from phishing and trust abuse into a board-level crisis</h1>
+        <p>The attackers did not need a highly advanced entry technique. They combined social engineering, supplier access, weak identity control, privileged account exposure, and delayed detection to turn one compromise into widespread disruption and a major personal data breach.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="impact-grid">
+          <article class="impact-card"><span>01</span><h3>Initial targeting</h3><p>The attackers used publicly available information and supplier relationships to craft a believable approach to an MSP technician, showing how external trust can become internal risk without strong verification.</p></article>
+          <article class="impact-card"><span>02</span><h3>Credential compromise</h3><p>Malware deployed through the phishing route later captured highly privileged credentials, creating a major escalation point across systems, cloud services and core infrastructure.</p></article>
+          <article class="impact-card"><span>03</span><h3>Lateral movement</h3><p>Once inside, the attackers explored the environment, disabled protections, and moved across systems without being stopped early because access was too broad and visibility was too weak.</p></article>
+          <article class="impact-card"><span>04</span><h3>Operational disruption</h3><p>Files were encrypted, the website and IMS became unavailable, online trading was interrupted, and executives faced time-sensitive decisions even while some store functions remained partially operational.</p></article>
+          <article class="impact-card"><span>05</span><h3>Data breach impact</h3><p>Investigators later confirmed that personal data relating to at least 60,000 customers and all employees had been exposed, transforming the incident into a serious legal and reputational event.</p></article>
+          <article class="impact-card"><span>06</span><h3>Business consequences</h3><p>The attack produced recovery costs, staff fatigue, insurer involvement, reputational damage, disrupted operations, and ongoing anxiety about regulatory scrutiny and future trust.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout">
+          <h2>The real lesson is that weak trust boundaries and privileged access design can magnify a small entry point into enterprise-wide harm.</h2>
+          <p>That is why the response should not focus only on malware removal. It must also address supplier assurance, identity governance, detection capability, and the quality of executive decision-making under pressure.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>Attack &amp; impact</span><span>Sportetitive scenario analysis</span></div></footer>
 </body>
 </html>

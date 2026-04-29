@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leadership Roles</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Leadership Roles | Sportetitive</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand">Sportetitive Resilience</div>
-      <nav>
-        <a href="index.html">Overview</a>
-        <a href="attack-impact.html">Attack &amp; Impact</a>
-        <a href="incident-response.html">Incident Response</a>
-        <a href="leadership-roles.html" class="active">Leadership Roles</a>
-        <a href="frameworks.html">MITRE &amp; Zero Trust</a>
-        <a href="recommendations.html">Recommendations</a>
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect><path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="brand-name"><strong>Sportetitive Briefing</strong><span>Board-level cyber resilience website</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">Response</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container narrow">
-      <p class="eyebrow">Senior management responsibilities</p>
-      <h1>Cyber resilience depends on shared ownership across leadership</h1>
-      <p class="lead">No single executive can manage a ransomware crisis alone. The Sportetitive scenario shows that response quality depends on clear ownership across business leadership, technical leadership, compliance, HR, finance, communications and external partners.</p>
-
-      <div class="framework-list">
-        <div class="framework-item"><h2>CEO</h2><p>Chairs the executive crisis group, approves major operational and public decisions, and ensures management priorities remain aligned with the wider business response.</p></div>
-        <div class="framework-item"><h2>CIO</h2><p>Owns business impact assessment, board reporting, recovery priorities, supplier governance and strategic decision logging. The CIO helps translate technical risk into business risk.</p></div>
-        <div class="framework-item"><h2>CTO</h2><p>Leads technical containment, forensic coordination, eradication and restoration sequencing. The CTO ensures the technical response is controlled and evidence-based.</p></div>
-        <div class="framework-item"><h2>IT Manager</h2><p>Executes technical actions, supports forensic investigation, preserves logs and coordinates the internal IT team during the response effort.</p></div>
-        <div class="framework-item"><h2>CFO</h2><p>Handles insurer engagement, cost tracking, emergency spending, procurement and financial impact reporting. This role matters because major incidents create fast-moving cost and risk decisions.</p></div>
-        <div class="framework-item"><h2>CHRO / HR leadership</h2><p>Supports staff communication, fatigue management, rota planning, wellbeing and human-factor controls such as awareness and social engineering resilience.</p></div>
-        <div class="framework-item"><h2>NED compliance / data protection</h2><p>Supports breach assessment, regulatory reasoning, evidence logging, affected-individual risk assessment and formal notification where required.</p></div>
-        <div class="framework-item"><h2>Communications lead</h2><p>Controls internal, customer, supplier and media messaging so communication is accurate, timely and consistent during a high-pressure incident.</p></div>
-        <div class="framework-item"><h2>External partners</h2><p>Insurers, forensic specialists, police, legal advisers and the MSP all play defined supporting roles, but they should operate under monitored, approved and clearly documented arrangements.</p></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Shared ownership</div>
+        <h1>Cyber resilience depends on clear leadership ownership across the organisation</h1>
+        <p>No single executive can manage a ransomware crisis alone. Response quality depends on clear ownership across business leadership, technical leadership, compliance, HR, finance, communications, and external partners.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="role-grid">
+          <article class="role-card"><span>CEO</span><h3>Leads business direction</h3><p>Chairs the executive crisis group, approves major operational and public decisions, and keeps management priorities aligned with the wider business response.</p></article>
+          <article class="role-card"><span>CIO</span><h3>Owns business risk translation</h3><p>Owns impact assessment, board reporting, recovery priorities, supplier governance, and strategic decision logging so technical risk becomes business risk insight.</p></article>
+          <article class="role-card"><span>CTO</span><h3>Leads technical response</h3><p>Directs containment, forensic coordination, eradication, and restoration sequencing so the technical response remains controlled and evidence-based.</p></article>
+          <article class="role-card"><span>IT Manager</span><h3>Executes operational actions</h3><p>Supports forensic investigation, preserves logs, and coordinates the internal IT team under intense response pressure.</p></article>
+          <article class="role-card"><span>CFO</span><h3>Controls cost and insurer action</h3><p>Handles insurer engagement, cost tracking, emergency spending, procurement, and financial impact reporting during fast-moving decisions.</p></article>
+          <article class="role-card"><span>CHRO / HR</span><h3>Protects people and resilience</h3><p>Supports staff communication, fatigue management, rota planning, wellbeing, and human-factor controls such as awareness and social engineering resilience.</p></article>
+          <article class="role-card"><span>NED compliance</span><h3>Supports regulatory reasoning</h3><p>Helps with breach assessment, evidence logging, affected-individual risk assessment, and notification decisions where required.</p></article>
+          <article class="role-card"><span>Communications</span><h3>Owns message discipline</h3><p>Controls internal, customer, supplier, and media messaging so updates remain accurate, timely, and consistent during a high-pressure incident.</p></article>
+          <article class="role-card"><span>External partners</span><h3>Support under governance</h3><p>Insurers, forensic specialists, police, legal advisers, and the MSP play defined supporting roles but should operate under monitored, approved, and documented arrangements.</p></article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>Leadership roles</span><span>Shared executive ownership model</span></div></footer>
 </body>
 </html>

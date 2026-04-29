@@ -1,89 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sportetitive Cyber Resilience</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Sportetitive Cyber Resilience Briefing</title>
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand">Sportetitive Resilience</div>
-      <nav>
-        <a href="index.html" class="active">Overview</a>
-        <a href="attack-impact.html">Attack &amp; Impact</a>
-        <a href="incident-response.html">Incident Response</a>
-        <a href="leadership-roles.html">Leadership Roles</a>
-        <a href="frameworks.html">MITRE &amp; Zero Trust</a>
-        <a href="recommendations.html">Recommendations</a>
+    <div class="header-inner">
+      <a class="brand" href="./index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="6" y="6" width="36" height="36" rx="12" stroke="currentColor" stroke-width="2.5"></rect>
+          <path d="M16 30.5 23 17l3.5 7 5.5-10 0 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="brand-name">
+          <strong>Sportetitive Briefing</strong>
+          <span>Board-level cyber resilience website</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./attack-impact.html">Attack &amp; Impact</a>
+        <a href="./incident-response.html">Response</a>
+        <a href="./frameworks.html">Frameworks</a>
+        <a href="./leadership-roles.html">Leadership</a>
+        <a href="./recommendations.html">Recommendations</a>
       </nav>
-      <button id="themeToggle" class="theme-btn">Toggle theme</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Board-level cyber resilience briefing</p>
-        <h1>Sportetitive’s ransomware attack should be understood as a company-wide management failure, not only a technical incident.</h1>
-        <p class="lead">The attack affected operations, customer trust, employee data, supplier assurance, legal compliance and recovery decision-making. This website brings the key findings together so the board and senior management can understand what happened, who owns what, and what must improve next.</p>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Executive cyber briefing</div>
+          <h1>Sportetitive’s ransomware attack was a business-wide management failure, not only a technical incident.</h1>
+          <p class="hero-copy">This website translates the scenario into a clear board-level narrative: how the attack escalated, where control and governance failed, who owns the response, and what needs to change next.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="./attack-impact.html">Explore the attack path</a>
+            <a class="button secondary" href="./recommendations.html">View strategic actions</a>
+          </div>
+        </div>
+        <aside class="board-card" aria-label="Board risk snapshot">
+          <div class="board-card-top">
+            <h2>Board risk snapshot</h2>
+            <span>March 2026</span>
+          </div>
+          <div class="risk-meter">
+            <div class="meter-row"><span>Operational</span><div class="bar high"><span></span></div><strong>High</strong></div>
+            <div class="meter-row"><span>Regulatory</span><div class="bar high"><span></span></div><strong>High</strong></div>
+            <div class="meter-row"><span>Reputation</span><div class="bar medium"><span></span></div><strong>Severe</strong></div>
+            <div class="meter-row"><span>Recovery</span><div class="bar medium"><span></span></div><strong>Fragile</strong></div>
+          </div>
+          <div class="hero-stat-grid">
+            <div class="hero-stat"><strong>60k+</strong><span>Customers affected in the breach scenario</span></div>
+            <div class="hero-stat"><strong>6</strong><span>Store locations affected by disruption and uncertainty</span></div>
+            <div class="hero-stat"><strong>72h</strong><span>Pressure window implied by the ransom demand</span></div>
+            <div class="hero-stat"><strong>£1.3m</strong><span>Incident cost before longer-term fallout</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-2">
-        <div class="card">
+      <div class="container">
+        <div class="section-header">
           <h2>Why this matters</h2>
-          <p>Sportetitive was compromised through social engineering, supplier trust and weak identity controls. The attackers captured privileged credentials, moved across systems, stole personal data and then encrypted files to disrupt the business. This made the incident operational, financial, legal and reputational at the same time.</p>
-          <p>The response therefore needs to connect technical recovery with leadership accountability, staff wellbeing, insurer coordination, regulatory reporting, supplier governance and long-term resilience planning.</p>
+          <p>The attack affected operations, customer trust, employee data, supplier assurance, legal compliance, communications, and board decision-making at the same time.</p>
         </div>
-        <div class="card accent">
-          <h2>What this website covers</h2>
-          <ul>
-            <li>A clear summary of the attack path, business disruption and data exposure.</li>
-            <li>An incident response structure showing what must happen from detection to lessons learned.</li>
-            <li>A leadership view of responsibilities across the CEO, CIO, CTO, CFO, CHRO, NEDs, IT team and communications roles.</li>
-            <li>Framework-based analysis using MITRE ATT&amp;CK and Zero Trust.</li>
-            <li>Strategic recommendations for board-level improvement.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <h2>Board-level priorities</h2>
-        <div class="timeline">
-          <div class="step"><span>01</span><p>Understand how the attack happened and why supplier trust, missing MFA and privileged access became critical weaknesses.</p></div>
-          <div class="step"><span>02</span><p>Clarify role ownership across the board and senior management during incident response and recovery.</p></div>
-          <div class="step"><span>03</span><p>Use recognised frameworks to justify stronger controls, governance and investment decisions.</p></div>
-          <div class="step"><span>04</span><p>Translate lessons learned into practical improvements in monitoring, access control, backups, supplier assurance and board reporting.</p></div>
+        <div class="panel content-block">
+          <p>Sportetitive was compromised through social engineering, supplier trust, weak identity control, and privileged access exposure. Once the attackers captured high-value credentials, they could move across systems, steal personal data, and encrypt files in a way that created operational, financial, legal, and reputational harm simultaneously.</p>
+          <p>The response therefore has to connect technical recovery with leadership accountability, staff wellbeing, insurer coordination, regulatory reporting, supplier governance, and long-term resilience planning. That is why this website frames the incident as a board issue as much as a cyber security issue.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-3">
-        <div class="mini-card">
-          <h3>Attack &amp; Impact</h3>
-          <p>See the attack path, affected systems, business consequences and breach implications.</p>
-          <a href="attack-impact.html">Open page</a>
+      <div class="container">
+        <div class="section-header">
+          <h2>What this website covers</h2>
+          <p>Each page focuses on one leadership question so directors and technical leads can move from the executive picture to practical improvement actions quickly.</p>
         </div>
-        <div class="mini-card">
-          <h3>Leadership Roles</h3>
-          <p>Review responsibilities for the CEO, CIO, CTO, CFO, CHRO, NEDs and support functions.</p>
-          <a href="leadership-roles.html">Open page</a>
+        <div class="page-card-grid">
+          <a class="page-card" href="./attack-impact.html"><span>01</span><h3>Attack &amp; Impact</h3><p>See how phishing, supplier trust and weak identity controls escalated into disruption, data exposure and board-level pressure.</p></a>
+          <a class="page-card" href="./incident-response.html"><span>02</span><h3>Incident response</h3><p>Review the ransomware response cycle from preparation through recovery and lessons learned.</p></a>
+          <a class="page-card" href="./frameworks.html"><span>03</span><h3>Frameworks</h3><p>Use MITRE ATT&amp;CK and Zero Trust to explain what happened and justify stronger controls.</p></a>
+          <a class="page-card" href="./leadership-roles.html"><span>04</span><h3>Leadership roles</h3><p>Clarify ownership across the CEO, CIO, CTO, CFO, CHRO, NEDs, IT management and external partners.</p></a>
+          <a class="page-card" href="./recommendations.html"><span>05</span><h3>Recommendations</h3><p>Translate lessons learned into strategic actions across identity, monitoring, suppliers, recovery and governance.</p></a>
+          <article class="page-card"><span>Focus</span><h3>Board priorities</h3><p>Understand root cause, assign role ownership, justify investment, and build a more resilient operating model for future incidents.</p></article>
         </div>
-        <div class="mini-card">
-          <h3>Recommendations</h3>
-          <p>Move from crisis response to longer-term resilience and governance improvement.</p>
-          <a href="recommendations.html">Open page</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout">
+          <h2>The key leadership challenge is not only restoring systems, but restoring trust, control, and decision quality.</h2>
+          <p>Sportetitive’s next phase should move beyond recovery and into measurable resilience: better identity security, stronger supplier governance, clearer board oversight, and a more disciplined response model.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Sportetitive cyber resilience briefing</span>
+      <span>Static site redesign for executive communication</span>
+    </div>
+  </footer>
 </body>
 </html>
